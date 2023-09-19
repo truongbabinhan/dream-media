@@ -2,6 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Livemono;
+  src: url(./assets/fonts/Livemono-Thin.ttf);
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: Livemono;
+  src: url(./assets/fonts/Livemono-Light.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Livemono;
+  src: url(./assets/fonts/Livemono-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Livemono;
+  src: url(./assets/fonts/Livemono-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Livemono;
+  src: url(./assets/fonts/Livemono-SemiBold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Livemono;
+  src: url(./assets/fonts/Livemono-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Aeros;
+  src: url(./assets/fonts/Aeros.ttf);
+  font-weight: 400;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,8 +58,18 @@
   }
 }
 
+html {
+  scroll-behavior: initial;
+  width: 100%;
+  min-height: 100%;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
+  font-weight: 400;
+  font-family: Livemono;
+  width: 100%;
+  min-height: 100%;
   background: linear-gradient(
       to bottom,
       transparent,
