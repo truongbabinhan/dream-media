@@ -25,12 +25,12 @@ const Header = () => {
   const [isShowMenu, setIsShowMenu] = useState(false);
   useEffect(() => {
     const options = { passive: true };
-    const scroll = (event) => {
+    const scroll = (event: any) => {
       const { pageYOffset, scrollY, innerHeight } = window;
       setPercentScroll((pageYOffset / innerHeight) * 100);
     };
     document.addEventListener("scroll", scroll, options);
-    () => document.removeEventListener("scroll", scroll, options);
+    () => document.removeEventListener("scroll", scroll, true);
   }, []);
   return (
     <>

@@ -1,7 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
-
-export const LoadingScreen = ({ setIsShowHome }) => {
+interface LoadingScreenProps {
+  setIsShowHome: any;
+}
+export const LoadingScreen = ({ setIsShowHome }: LoadingScreenProps) => {
   const [percentLoading, setPercentLoading] = useState(0);
 
   const randomNumberInRange = (min: number, max: number) => {
