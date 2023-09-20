@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { useState, useRef, useEffect } from "react";
-import Clock from "react-live-clock";
+import { useState, useEffect } from "react";
+import Moment from "moment-timezone";
 const listMenu = [
   {
     name: "contact",
@@ -19,14 +19,14 @@ const listMenu = [
     isUpdate: true,
   },
 ];
-const Header = () => {
+export const Header = () => {
   const [isChill, setIsChill] = useState(true);
   const [percentScroll, setPercentScroll] = useState(0);
   const [isShowMenu, setIsShowMenu] = useState(false);
   useEffect(() => {
     const options = { passive: true };
     const scroll = (event: any) => {
-      const { pageYOffset, scrollY, innerHeight } = window;
+      const { pageYOffset, innerHeight } = window;
       setPercentScroll((pageYOffset / innerHeight) * 100);
     };
     document.addEventListener("scroll", scroll, options);
@@ -44,17 +44,20 @@ const Header = () => {
       />
       <p
         onClick={() => setIsShowMenu(!isShowMenu)}
-        className="fixed z-10 left-1/2 -translate-x-1/2 top-5 select-none cursor-pointer"
+        className="fixed text-[15px] z-10 left-1/2 -translate-x-1/2 top-5 select-none cursor-pointer"
       >
         [ {isShowMenu ? "CLOSE" : "MENU"} ]
       </p>
-      <p className="fixed right-5 top-5">SCROLL ({percentScroll.toFixed()}%)</p>
-      <p className="fixed left-5 bottom-5">
-        HOCHIMINH CITY <Clock format={"h:mm:ss A"} ticking={true} />
+      <p className="fixed text-[15px] right-5 top-5 z-10">
+        SCROLL ({percentScroll.toFixed()}%)
+      </p>
+      <p className="fixed text-[15px] left-5 bottom-5 z-10">
+        HCMC ({Moment().tz("Asia/Ho_Chi_Minh").format("h:mm A")}) NEW YORK (
+        {Moment().tz("America/New_York").format("h:mm A")})
       </p>
       <p
         onClick={() => setIsChill(!isChill)}
-        className="fixed z-10 cursor-pointer right-5 bottom-5 select-none"
+        className="fixed text-[15px] z-10 cursor-pointer right-5 bottom-5 select-none"
       >
         CHILL: {isChill ? "ON" : "OFF"}
       </p>
