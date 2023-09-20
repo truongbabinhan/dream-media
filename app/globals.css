@@ -44,6 +44,12 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: BebasNeue;
+  src: url(./assets/fonts/BebasNeue-Regular.ttf);
+  font-weight: 400;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
