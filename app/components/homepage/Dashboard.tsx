@@ -8,7 +8,7 @@ export const Dashboard = () => {
         <Image
           src="/homepage/left.gif"
           alt="star"
-          width={486}
+          width={480}
           height={273}
           priority
           className="absolute left-1/2 top-1/2 -translate-x-[calc(50%+440px)] -translate-y-[calc(50%+275px)] z-[1]"

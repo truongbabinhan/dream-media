@@ -19,19 +19,24 @@ const listMenu = [
     isUpdate: true,
   },
 ];
-export const Header = () => {
-  const [isChill, setIsChill] = useState(true);
+interface HeaderProps {
+  setIsChill: any;
+  isChill: boolean;
+}
+export const Header = ({ setIsChill, isChill }: HeaderProps) => {
   const [percentScroll, setPercentScroll] = useState(0);
   const [isShowMenu, setIsShowMenu] = useState(false);
   useEffect(() => {
     const options = { passive: true };
-    const scroll = (event: any) => {
-      const { pageYOffset, innerHeight } = window;
-      setPercentScroll((pageYOffset / innerHeight) * 100);
+    const scroll = () => {
+      const { innerHeight, scrollY } = window;
+      const docHeight = document.body.offsetHeight;
+      setPercentScroll((scrollY / (docHeight - innerHeight)) * 100);
     };
     document.addEventListener("scroll", scroll, options);
     () => document.removeEventListener("scroll", scroll, true);
   }, []);
+
   return (
     <>
       <Image

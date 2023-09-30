@@ -71,7 +71,7 @@ export const Work = () => {
               priority
               className="absolute top-0 left-0 z-[1]"
             />
-            <div className="relative z-[2] p-5 uppercase">
+            <div className="z-[2] p-[25px] uppercase sticky top-[70px]">
               <p
                 style={{ lineHeight: 0.8, fontFamily: "BebasNeue" }}
                 className="text-[100px] font-bold mb-1 ml-[-2px]"
