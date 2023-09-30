@@ -1,22 +1,19 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Header, Footer } from "./components";
-import { LoadingScreen, Dashboard, Work } from "./components/homepage";
+import {
+  LoadingScreen,
+  Dashboard,
+  Work,
+  ShowReel,
+  WeProduce,
+  Brand,
+} from "./components/homepage";
 // import Lenis from "@studio-freight/lenis";
 
 export default function Home() {
   const [isShowHome, setIsShowHome] = useState(false);
-
-  useEffect(() => {
-    const options = { passive: true };
-    const scroll = (event: any) => {
-      const { pageYOffset, scrollY, innerHeight } = window;
-      console.log("🚀 ~ file: page.tsx:14 ~ scroll ~ window:", window);
-      // setPercentScroll((pageYOffset / innerHeight) * 100);
-    };
-    document.addEventListener("scroll", scroll, options);
-    () => document.removeEventListener("scroll", scroll, true);
-  }, []);
+  const [isChill, setIsChill] = useState(false);
 
   //Lenis
   // const lenis = new Lenis({
@@ -43,11 +40,14 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col relative items-center justify-between bg-black">
-      <Header />
+      <Header setIsChill={setIsChill} isChill={isChill} />
       {isShowHome ? (
         <>
+          <ShowReel isChill={isChill} />
           <Dashboard />
           <Work />
+          <WeProduce />
+          <Brand />
           <Footer />
         </>
       ) : (
