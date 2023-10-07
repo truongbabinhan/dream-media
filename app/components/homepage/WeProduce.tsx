@@ -1,4 +1,4 @@
-import { TextScroller } from "..";
+import { TextScramble, TextScroller } from "..";
 import Image from "next/image";
 
 const data = [
@@ -77,13 +77,13 @@ export const WeProduce = () => {
             alt="angle"
             className="rotate-180 absolute bottom-[-83px] right-[-64px]"
           />
-          <p
+          <TextScramble
+            text={`TV Commercial Production: We develop your next big idea,
+            <br /> take it into production and handle distribution.`}
             className="text-[16px] absolute bottom-[-75px] left-[63px] pr-[190px]"
-            style={{ fontFamily: "Livemono" }}
-          >
-            TV Commercial Production: We develop your next big idea,
-            <br /> take it into production and handle distribution.
-          </p>
+            styles={{ fontFamily: "Livemono" }}
+          />
+
           <div className="rounded-[70px] w-full h-full overflow-hidden relative">
             <Image
               src="/homepage/produce1.png"
