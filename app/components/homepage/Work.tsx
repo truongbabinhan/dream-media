@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { TextScramble } from "..";
 
 export const Work = () => {
   const dataWork = [
@@ -85,16 +86,27 @@ export const Work = () => {
                 {item.title}
               </p>
               {item.client && (
-                <p className="text-[14px]">CLIENT: {item.client}</p>
+                <TextScramble
+                  text={`CLIENT: ${item.client}`}
+                  className="text-[14px]"
+                />
               )}
-              {item.brand && <p className="text-[14px]">BRAND: {item.brand}</p>}
+              {item.brand && (
+                <TextScramble
+                  text={`BRAND: ${item.brand}`}
+                  className="text-[14px]"
+                />
+              )}
               {item.agency && (
-                <p className="text-[14px]">AGENCY: {item.agency}</p>
+                <TextScramble
+                  text={`AGENCY: ${item.agency}`}
+                  className="text-[14px]"
+                />
               )}
-
-              <p className="text-[14px]">
-                PRODUCTION HOUSE: {item.productionHouse}
-              </p>
+              <TextScramble
+                text={`PRODUCTION HOUSE: ${item.productionHouse}`}
+                className="text-[14px]"
+              />
             </div>
           </div>
         );

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { TextScramble } from "..";
 
 const data = [
   {
@@ -80,7 +81,10 @@ const data = [
 export const Brand = () => {
   return (
     <div className="w-full min-h-screen relative flex flex-col justify-center items-center px-[130px]">
-      <p className="text-[20px] mb-[80px]">[BRANDS WE WORK WITH]</p>
+      <TextScramble
+        text="[BRANDS WE WORK WITH]"
+        className="text-[20px] mb-[80px]"
+      />
       {/* <div className="flex justify-center items-center flex-wrap gap-10 max-w-[1180px]">
         {data.map((item, index) => {
           return (
@@ -105,10 +109,11 @@ export const Brand = () => {
         objectPosition="center"
         className="!relative"
       />
-      <p className="text-[11px] mt-[80px]">
-        TO OUR CLIENTS COLLABORATORS PARTNERS AND FRIENDS: THANK YOU FOR BEING A
-        PART OF DREAM
-      </p>
+      <TextScramble
+        text="TO OUR CLIENTS COLLABORATORS PARTNERS AND FRIENDS: THANK YOU FOR BEING A
+        PART OF DREAM"
+        className="text-[11px] mt-[80px]"
+      />
     </div>
   );
 };

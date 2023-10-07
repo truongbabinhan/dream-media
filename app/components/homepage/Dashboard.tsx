@@ -1,4 +1,7 @@
 import Image from "next/image";
+import Lottie from "lottie-react";
+import { TextScramble } from "..";
+import LogoAnimate from "../../assets/json/logo.json";
 
 export const Dashboard = () => {
   return (
@@ -37,19 +40,25 @@ export const Dashboard = () => {
           priority
           className="relative z-[2]"
         />
-        <p className="w-[617px] text-[10px] mt-[230px] mb-[40px] text-center">
-          DREAM MEDIA IS A PRODUCTION COMPANY WITH HQ IN HCMC AND OPERATIONS
+        {/* <div className="w-[753px]">
+          <Lottie animationData={LogoAnimate} loop={true} />
+        </div> */}
+        <TextScramble
+          text="DREAM MEDIA IS A PRODUCTION COMPANY WITH HQ IN HCMC AND OPERATIONS
           THROUGHOUT VIETNAM. WE REPRESENT A SPECIFIC ROSTER OF VIRAL FILM
           DIRECTORS AND STAFF A DEDICATED PRODUCTION SERVICES TEAM. WE PROVIDE
           FULL PRODUCTION SERVICES FOR FEATURES FILMS, COMMERCIALS, TV SERIES,
-          DOCUMENTARIES, AND BRANDED CONTENT.
-        </p>
-        <p className="text-[16px] text-center">
-          DREAM MEDIA IS A FULL SERVICES PRODUCTION HOUSE{" "}
-        </p>
-        <p className="text-[20px] text-center absolute bottom-10">
-          [CHECK OUT OUR WORK]
-        </p>
+          DOCUMENTARIES, AND BRANDED CONTENT."
+          className="w-[617px] text-[10px] mt-[230px] mb-[40px] text-center"
+        />
+        <TextScramble
+          text="DREAM MEDIA IS A FULL SERVICES PRODUCTION HOUSE"
+          className="text-[16px] text-center"
+        />
+        <TextScramble
+          text="[CHECK OUT OUR WORK]"
+          className="text-[20px] text-center absolute bottom-10"
+        />
       </div>
     </div>
   );

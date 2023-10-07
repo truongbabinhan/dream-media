@@ -46,7 +46,7 @@ export const ShowReel = ({ isChill }: ShowReelProps) => {
         autoPlay
         onMouseOver={(event) => onPlayVideoHover(event.target)}
         onMouseOut={(event) => onPauseVideoHover(event.target)}
-        src="./intro.mp4"
+        src="./showreel.mp4"
       />
     </div>
   );
