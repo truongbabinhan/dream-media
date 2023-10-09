@@ -2,9 +2,12 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
 
-export const TextScroller = () => {
-  const [key, setKey] = useState(1);
+interface TextScrollerProps {
+  key: number;
+  setKey: any;
+}
 
+export const TextScroller = ({ key, setKey }: TextScrollerProps) => {
   const scrolling = useSpring({
     from: { transform: "translate(30%,0)" },
     to: { transform: "translate(-30%,0)" },
@@ -24,29 +27,49 @@ export const TextScroller = () => {
       >
         <Image src="./diamond.svg" width={50} height={50} alt="diamond" />
         <p
-          className="text-[70px] whitespace-nowrap"
-          style={{ fontFamily: "Aeros", lineHeight: 1 }}
+          className="text-[70px] whitespace-nowrap text-black"
+          style={{
+            fontFamily: "Aeros",
+            lineHeight: 1,
+            textShadow:
+              "-2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white",
+          }}
         >
           WE PRODUCE
         </p>
         <Image src="./diamond.svg" width={50} height={50} alt="diamond" />
         <p
-          className="text-[70px] whitespace-nowrap"
-          style={{ fontFamily: "Aeros", lineHeight: 1 }}
+          className="text-[70px] whitespace-nowrap text-black"
+          style={{
+            fontFamily: "Aeros",
+            lineHeight: 1,
+            textShadow:
+              "-2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white",
+          }}
         >
           WE PRODUCE
         </p>
         <Image src="./diamond.svg" width={50} height={50} alt="diamond" />
         <p
-          className="text-[70px] whitespace-nowrap"
-          style={{ fontFamily: "Aeros", lineHeight: 1 }}
+          className="text-[70px] whitespace-nowrap text-black"
+          style={{
+            fontFamily: "Aeros",
+            lineHeight: 1,
+            textShadow:
+              "-2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white",
+          }}
         >
           WE PRODUCE
         </p>
         <Image src="./diamond.svg" width={50} height={50} alt="diamond" />
         <p
-          className="text-[70px] whitespace-nowrap"
-          style={{ fontFamily: "Aeros", lineHeight: 1 }}
+          className="text-[70px] whitespace-nowrap text-black"
+          style={{
+            fontFamily: "Aeros",
+            lineHeight: 1,
+            textShadow:
+              "-2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white",
+          }}
         >
           WE PRODUCE
         </p>

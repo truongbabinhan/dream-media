@@ -1,98 +1,107 @@
+import { useState } from "react";
 import { TextScramble, TextScroller } from "..";
 import Image from "next/image";
+import { ProduceActive } from ".";
 
 const data = [
   {
+    id: 1,
     title: "TV COMMERCIALS (TVC)",
     desc: "TV Commercial Production: We develop your next big idea, take it into production and handle distribution.",
-    img: "./homepage/produce1.png",
+    img: "/we-produce/tvCommercials1.png",
   },
   {
+    id: 2,
     title: "VIRAL VIDEOS",
     desc: "TV Commercial Production: We develop your next big idea, take it into production and handle distribution.",
-    img: "./homepage/produce1.png",
+    img: "/we-produce/viralVideos1.png",
   },
   {
+    id: 3,
     title: "PHOTOGRAPHY",
     desc: "TV Commercial Production: We develop your next big idea, take it into production and handle distribution.",
-    img: "./homepage/produce1.png",
+    img: "/we-produce/photography1.png",
   },
   {
+    id: 4,
     title: "DIGITAL CONTENTS",
     desc: "TV Commercial Production: We develop your next big idea, take it into production and handle distribution.",
-    img: "./homepage/produce1.png",
+    img: "/we-produce/digitalContents1.png",
   },
   {
+    id: 5,
     title: "POST-PRODUCTION",
     desc: "TV Commercial Production: We develop your next big idea, take it into production and handle distribution.",
-    img: "./homepage/produce1.png",
+    img: "/we-produce/postProduction1.png",
   },
   {
+    id: 6,
     title: "LIVE STREAM",
     desc: "TV Commercial Production: We develop your next big idea, take it into production and handle distribution.",
-    img: "./homepage/produce1.png",
+    img: "/we-produce/liveStream1.png",
   },
   {
-    title: "CORPORATE VIDEOS",
+    id: 7,
+    title: "SHORT FILMS",
     desc: "TV Commercial Production: We develop your next big idea, take it into production and handle distribution.",
-    img: "./homepage/produce1.png",
+    img: "/we-produce/shortFilms1.png",
   },
 ];
 
 export const WeProduce = () => {
+  const [activeProduce, setActiveProduce] = useState(1);
+  const [key, setKey] = useState(1);
+
+  const renderProduce = () => {
+    switch (activeProduce) {
+      case 1:
+        return <ProduceActive data={data[0]} />;
+      case 2:
+        return <ProduceActive data={data[1]} />;
+      case 3:
+        return <ProduceActive data={data[2]} />;
+      case 4:
+        return <ProduceActive data={data[3]} />;
+      case 5:
+        return <ProduceActive data={data[4]} />;
+      case 6:
+        return <ProduceActive data={data[5]} />;
+      case 7:
+        return <ProduceActive data={data[6]} />;
+      default:
+        return null;
+    }
+  };
+
   return (
-    <div className="w-full min-h-screen relative flex flex-col justify-center items-center">
-      <TextScroller />
+    <div className="w-full min-h-screen relative flex flex-col justify-center items-center overflow-hidden">
+      <TextScroller key={key} setKey={setKey} />
       <div className="flex justify-center items-center gap-1 mt-[10px] mb-[44px]">
         <Image src="./diamond.svg" width={20} height={20} alt="diamond" />
         <Image src="./diamond.svg" width={20} height={20} alt="diamond" />
         <Image src="./diamond.svg" width={20} height={20} alt="diamond" />
       </div>
-      <div className="flex justify-center items-center gap-[120px] w-full pl-[30px] pr-[100px]">
-        <div className="flex flex-col gap-[50px]">
+      <div className="flex justify-center items-center gap-[120px] w-full pl-[20px] pr-[80px]">
+        <div className="flex flex-col gap-2">
           {data.map((item, index) => {
             return (
-              <p
+              <div
                 key={index}
-                className="text-[25px] hover:font-bold hover:underline cursor-pointer"
-                style={{ fontFamily: "Livemono" }}
+                onMouseOver={() => setActiveProduce(item.id)}
+                className="h-[80px] rounded-[30px] flex px-4 items-center cursor-pointer bg-center bg-cover"
+                style={{
+                  backgroundImage:
+                    item.id === activeProduce ? `url(${item.img})` : "",
+                }}
               >
-                {item.title}
-              </p>
+                <p className="text-[25px]" style={{ fontFamily: "Livemono" }}>
+                  {item.title}
+                </p>
+              </div>
             );
           })}
         </div>
-        <div className="flex-1 relative max-w-[953px]">
-          <Image
-            src="/homepage/angle.svg"
-            width={254}
-            height={156}
-            alt="angle"
-            className="absolute top-[-24px] left-[-32px]"
-          />
-          <Image
-            src="/homepage/angle.svg"
-            width={254}
-            height={156}
-            alt="angle"
-            className="rotate-180 absolute bottom-[-83px] right-[-64px]"
-          />
-          <TextScramble
-            text={`TV Commercial Production: We develop your next big idea,
-            <br /> take it into production and handle distribution.`}
-            className="text-[16px] absolute bottom-[-75px] left-[63px] pr-[190px]"
-            styles={{ fontFamily: "Livemono" }}
-          />
-
-          <div className="rounded-[70px] w-full h-full overflow-hidden relative">
-            <Image
-              src="/homepage/produce1.png"
-              layout="fill"
-              className="w-full h-auto !relative"
-              alt="produce"
-            />
-          </div>
-        </div>
+        {renderProduce()}
       </div>
     </div>
   );
