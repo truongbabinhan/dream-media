@@ -1,9 +1,25 @@
 import Image from "next/image";
-import Lottie from "lottie-react";
+import Lottie, { useLottie } from "lottie-react";
+// import Lottie from "react-lottie";
+import { useInView } from "react-intersection-observer";
+import lottie from "lottie-web";
 import { TextScramble } from "..";
-import LogoAnimate from "../../assets/json/logo.json";
+import LogoAnimate from "../../assets/json/logo-white.json";
+import { useState, useEffect } from "react";
 
 export const Dashboard = () => {
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
+  const options = {
+    animationData: LogoAnimate,
+    loop: true,
+    autoplay: true,
+  };
+  const { View, play, goToAndStop, pause } = useLottie(options);
+  // useEffect(() => {
+  //   play();
+  // }, [inView]);
   return (
     <div className="w-full flex min-h-screen bg-homepage-dashboard bg-center bg-cover relative">
       <div className="w-full h-full backdrop-brightness-[0.1] absolute left-0 top-0 z-[1]"></div>
@@ -33,16 +49,17 @@ export const Dashboard = () => {
           className="absolute right-1/2 top-1/2 translate-x-[calc(50%)] -translate-y-[calc(50%)]"
         />
         <Image
+          ref={ref}
           src="/logo-home.svg"
           alt="Logo"
           width={753}
           height={134}
           priority
-          className="relative z-[2]"
+          className="relative z-[2] opacity-0"
         />
-        {/* <div className="w-[753px]">
-          <Lottie animationData={LogoAnimate} loop={true} />
-        </div> */}
+        <div className="w-[1280px] absolute top-[-65px] left-1/2 -translate-x-1/2">
+          {View}
+        </div>
         <TextScramble
           text="DREAM MEDIA IS A PRODUCTION COMPANY WITH HQ IN HCMC AND OPERATIONS
           THROUGHOUT VIETNAM. WE REPRESENT A SPECIFIC ROSTER OF VIRAL FILM
