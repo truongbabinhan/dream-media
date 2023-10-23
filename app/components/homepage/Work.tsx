@@ -11,6 +11,7 @@ export const Work = () => {
       agency: "t&a ogivy",
       productionHouse: "dream media",
       background: "/work/fanta.png",
+      video: "/video/fanta.mp4",
     },
     {
       name: "surf",
@@ -20,6 +21,7 @@ export const Work = () => {
       agency: "t&a ogivy",
       productionHouse: "dream media",
       background: "/work/surf.png",
+      video: "",
     },
     {
       name: "LUNG CANCER",
@@ -29,6 +31,7 @@ export const Work = () => {
       agency: "TBWA",
       productionHouse: "dream media",
       background: "/work/cancer.png",
+      video: "",
     },
     {
       name: "LIPOVITAN",
@@ -38,6 +41,7 @@ export const Work = () => {
       agency: "Fortune Media",
       productionHouse: "dream media",
       background: "/work/lipovitan.png",
+      video: "",
     },
     {
       name: "fanta",
@@ -47,6 +51,7 @@ export const Work = () => {
       agency: "t&a ogivy",
       productionHouse: "dream media",
       background: "/work/fanta-newyear.png",
+      video: "",
     },
     {
       name: "VSMART",
@@ -56,13 +61,64 @@ export const Work = () => {
       agency: "",
       productionHouse: "dream media",
       background: "/work/vsmart.png",
+      video: "",
     },
   ];
+
+  const onPlayVideoHover = (video: any) => {
+    // Show loading animation.
+    var playPromise = video.play();
+
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          // Automatic playback started!
+          // Show playing UI.
+        })
+        .catch(() => {
+          // Auto-play was prevented
+          // Show paused UI.
+        });
+    }
+  };
+
+  const onPauseVideoHover = (video: any) => {
+    // Show loading animation.
+    var pausePromise = video.pause();
+
+    if (pausePromise !== undefined) {
+      pausePromise
+        .then(() => {
+          // Automatic playback started!
+          // Show playing UI.
+        })
+        .catch(() => {
+          // Auto-play was prevented
+          // Show paused UI.
+        });
+    }
+  };
   return (
     <div className="w-full flex flex-col relative">
       {dataWork.map((item, index) => {
         return (
-          <div key={index} className="min-h-screen w-full text-white relative">
+          <div
+            key={index}
+            className="min-h-screen w-full text-white relative group"
+          >
+            {item.video && (
+              <video
+                typeof="video/mp4"
+                className="w-full h-full max-w-full max-h-full object-cover absolute top-0 left-0"
+                preload="auto"
+                muted
+                loop
+                autoPlay
+                onMouseOver={(event) => onPlayVideoHover(event.target)}
+                onMouseOut={(event) => onPauseVideoHover(event.target)}
+                src={item.video}
+              />
+            )}
             <Image
               src={item.background}
               alt="work"
@@ -70,7 +126,9 @@ export const Work = () => {
               objectFit="cover"
               objectPosition="top left"
               priority
-              className="absolute top-0 left-0 z-[1]"
+              className={`transition-[filter_2s_cubic-bezier(0.005,0.985,0.22,1),transform_2s_cubic-bezier(0.005,0.985,0.22,1)] absolute top-0 left-0 z-[1] ${
+                item.video && "group-hover:hidden"
+              } group-hover:!blur-0 blur-[30px]`}
             />
             <div className="z-[2] p-[25px] uppercase sticky top-[70px]">
               <p
