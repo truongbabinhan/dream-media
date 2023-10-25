@@ -1,79 +1,136 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import { useSpring, animated } from "react-spring";
 
-interface TextScrollerProps {
-  key: number;
-  setKey: any;
-}
-
-export const TextScroller = ({ key, setKey }: TextScrollerProps) => {
+export const TextScroller = () => {
   const scrolling = useSpring({
     from: { transform: "translate(30%,0)" },
     to: { transform: "translate(-30%,0)" },
     config: { duration: 8000 },
     reset: true,
-    reverse: key % 2 == 0,
-    onRest: () => {
-      setKey(key + 1);
-    },
+    reverse: true,
   });
 
   return (
-    <div key={key} className="h-[70px]">
+    <div className="h-[70px] max-sm:h-[25px]">
       <animated.div
         style={scrolling}
         className="w-full flex justify-center items-center gap-[18px]"
       >
-        <Image src="./diamond.svg" width={50} height={50} alt="diamond" />
+        <Image
+          src="./diamond.svg"
+          width={50}
+          height={50}
+          alt="diamond"
+          className="max-sm:hidden"
+        />
+        <Image
+          src="./diamond.svg"
+          width={25}
+          height={25}
+          alt="diamond"
+          className="hidden max-sm:block"
+        />
         <p
-          className="text-[70px] whitespace-nowrap text-black"
+          className="text-[70px] whitespace-nowrap text-black max-sm:text-[25px]"
           style={{
             fontFamily: "Aeros",
             lineHeight: 1,
             textShadow:
-              "-2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white",
+              "-1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white",
           }}
         >
           WE PRODUCE
         </p>
-        <Image src="./diamond.svg" width={50} height={50} alt="diamond" />
+        <Image
+          src="./diamond.svg"
+          width={50}
+          height={50}
+          alt="diamond"
+          className="max-sm:hidden"
+        />
+        <Image
+          src="./diamond.svg"
+          width={25}
+          height={25}
+          alt="diamond"
+          className="hidden max-sm:block"
+        />
         <p
-          className="text-[70px] whitespace-nowrap text-black"
+          className="text-[70px] whitespace-nowrap text-black max-sm:text-[25px]"
           style={{
             fontFamily: "Aeros",
             lineHeight: 1,
             textShadow:
-              "-2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white",
+              "-1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white",
           }}
         >
           WE PRODUCE
         </p>
-        <Image src="./diamond.svg" width={50} height={50} alt="diamond" />
+        <Image
+          src="./diamond.svg"
+          width={50}
+          height={50}
+          alt="diamond"
+          className="max-sm:hidden"
+        />
+        <Image
+          src="./diamond.svg"
+          width={25}
+          height={25}
+          alt="diamond"
+          className="hidden max-sm:block"
+        />
         <p
-          className="text-[70px] whitespace-nowrap text-black"
+          className="text-[70px] whitespace-nowrap text-black max-sm:text-[25px]"
           style={{
             fontFamily: "Aeros",
             lineHeight: 1,
             textShadow:
-              "-2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white",
+              "-1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white",
           }}
         >
           WE PRODUCE
         </p>
-        <Image src="./diamond.svg" width={50} height={50} alt="diamond" />
+        <Image
+          src="./diamond.svg"
+          width={50}
+          height={50}
+          alt="diamond"
+          className="max-sm:hidden"
+        />
+        <Image
+          src="./diamond.svg"
+          width={25}
+          height={25}
+          alt="diamond"
+          className="hidden max-sm:block"
+        />
         <p
-          className="text-[70px] whitespace-nowrap text-black"
+          className="text-[70px] whitespace-nowrap text-black max-sm:text-[25px]"
           style={{
             fontFamily: "Aeros",
             lineHeight: 1,
             textShadow:
-              "-2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 2px 2px 0 white",
+              "-1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white",
           }}
         >
           WE PRODUCE
         </p>
-        <Image src="./diamond.svg" width={50} height={50} alt="diamond" />
+        <Image
+          src="./diamond.svg"
+          width={50}
+          height={50}
+          alt="diamond"
+          className="max-sm:hidden"
+        />
+        <Image
+          src="./diamond.svg"
+          width={25}
+          height={25}
+          alt="diamond"
+          className="hidden max-sm:block"
+        />
       </animated.div>
       ;
     </div>

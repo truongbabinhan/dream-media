@@ -13,7 +13,7 @@ import {
 
 export default function Home() {
   const [isShowHome, setIsShowHome] = useState(false);
-  const [isChill, setIsChill] = useState(false);
+  const [isChill, setIsChill] = useState(true);
 
   //Lenis
   // const lenis = new Lenis({
