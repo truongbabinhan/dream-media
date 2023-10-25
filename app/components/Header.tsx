@@ -26,6 +26,8 @@ interface HeaderProps {
 export const Header = ({ setIsChill, isChill }: HeaderProps) => {
   const [percentScroll, setPercentScroll] = useState(0);
   const [isShowMenu, setIsShowMenu] = useState(false);
+  const [dateNowVN, setDateNowVN] = useState("");
+  const [dateNowNY, setDateNowNY] = useState("");
   useEffect(() => {
     const options = { passive: true };
     const scroll = () => {
@@ -35,6 +37,11 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
     };
     document.addEventListener("scroll", scroll, options);
     () => document.removeEventListener("scroll", scroll, true);
+  }, []);
+
+  useEffect(() => {
+    setDateNowVN(Moment().tz("Asia/Ho_Chi_Minh").format("h:mm A"));
+    setDateNowNY(Moment().tz("America/New_York").format("h:mm A"));
   }, []);
 
   return (
@@ -65,11 +72,10 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
         SCROLL ({percentScroll.toFixed()}%)
       </p>
       <p className="fixed text-[15px] left-5 bottom-5 z-10 max-sm:hidden">
-        HCMC ({Moment().tz("Asia/Ho_Chi_Minh").format("h:mm A")}) NEW YORK (
-        {Moment().tz("America/New_York").format("h:mm A")})
+        HCMC ({dateNowVN}) NEW YORK ({dateNowNY})
       </p>
       <p className="fixed text-[12px] left-[10px] bottom-[10px] z-10 hidden max-sm:block">
-        HCMC ({Moment().tz("Asia/Ho_Chi_Minh").format("h:mm A")})
+        HCMC ({dateNowVN})
       </p>
       <p
         onClick={() => setIsChill(!isChill)}
