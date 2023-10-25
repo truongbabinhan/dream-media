@@ -84,7 +84,7 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
         CHILL: {isChill ? "ON" : "OFF"}
       </p>
       <div
-        className={`fixed z-20 top-[80px] left-[100px] bg-[linear-gradient(105deg,_color(display-p3_0.851_0.851_0.851_/_0.40)_15.93%,_color(display-p3_0.851_0.851_0.851_/_0.10)_94.84%)] backdrop-blur-lg min-w-screen transition-all overflow-hidden ${
+        className={`fixed z-20 top-[80px] left-[100px] bg-[linear-gradient(105deg,_color(display-p3_0.851_0.851_0.851_/_0.40)_15.93%,_color(display-p3_0.851_0.851_0.851_/_0.10)_94.84%)] backdrop-blur-lg max-sm:bg-black/90 min-w-screen transition-all overflow-hidden ${
           isShowMenu
             ? "h-[calc(100%-160px)] max-sm:h-[calc(100%-100px)]"
             : "h-0"
