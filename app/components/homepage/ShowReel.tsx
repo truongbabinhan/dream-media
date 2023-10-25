@@ -36,7 +36,7 @@ export const ShowReel = ({ isChill }: ShowReelProps) => {
     }
   };
   return (
-    <div className="w-full flex min-h-screen relative justify-center items-center object-cover">
+    <div className="w-full flex min-h-screen max-sm:min-h-max max-sm:mt-[50px] relative justify-center group items-center object-cover">
       <video
         typeof="video/mp4"
         className="w-full h-full max-w-full max-h-full"
@@ -46,7 +46,7 @@ export const ShowReel = ({ isChill }: ShowReelProps) => {
         autoPlay
         onMouseOver={(event) => onPlayVideoHover(event.target)}
         onMouseOut={(event) => onPauseVideoHover(event.target)}
-        src="./showreel.mp4"
+        src="/showreel.mp4"
       />
     </div>
   );

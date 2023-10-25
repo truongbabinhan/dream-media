@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TextScramble, TextScroller } from "..";
+import { TextScroller } from "..";
 import Image from "next/image";
 import { ProduceActive } from ".";
 
@@ -50,7 +50,6 @@ const data = [
 
 export const WeProduce = () => {
   const [activeProduce, setActiveProduce] = useState(1);
-  const [key, setKey] = useState(1);
 
   const renderProduce = () => {
     switch (activeProduce) {
@@ -74,27 +73,69 @@ export const WeProduce = () => {
   };
 
   return (
-    <div className="w-full min-h-screen relative flex flex-col justify-center items-center overflow-hidden">
-      <TextScroller key={key} setKey={setKey} />
-      <div className="flex justify-center items-center gap-1 mt-[10px] mb-[44px]">
-        <Image src="./diamond.svg" width={20} height={20} alt="diamond" />
-        <Image src="./diamond.svg" width={20} height={20} alt="diamond" />
-        <Image src="./diamond.svg" width={20} height={20} alt="diamond" />
+    <div className="w-full min-h-screen max-sm:min-h-max max-sm:pt-[50px] relative flex flex-col justify-center items-center overflow-hidden">
+      <TextScroller />
+      <div className="flex justify-center items-center gap-1 mt-[10px] mb-[44px] max-sm:mt-[40px] max-sm:mb-[10px]">
+        <Image
+          src="./diamond.svg"
+          width={20}
+          height={20}
+          alt="diamond"
+          // className="max-sm:hidden"
+        />
+        <Image
+          src="./diamond.svg"
+          width={20}
+          height={20}
+          alt="diamond"
+          // className="max-sm:hidden"
+        />
+        <Image
+          src="./diamond.svg"
+          width={20}
+          height={20}
+          alt="diamond"
+          // className="max-sm:hidden"
+        />
+        {/* <Image
+          src="./diamond.svg"
+          width={10}
+          height={10}
+          alt="diamond"
+          className="hidden max-sm:block"
+        />
+        <Image
+          src="./diamond.svg"
+          width={10}
+          height={10}
+          alt="diamond"
+          className="hidden max-sm:block"
+        />
+        <Image
+          src="./diamond.svg"
+          width={10}
+          height={10}
+          alt="diamond"
+          className="hidden max-sm:block"
+        /> */}
       </div>
-      <div className="flex justify-center items-center gap-[120px] w-full pl-[20px] pr-[80px]">
-        <div className="flex flex-col gap-2">
+      <div className="flex max-sm:flex-col-reverse justify-center items-center max-sm:items-start gap-[120px] w-full pl-[20px] pr-[80px] max-sm:pl-[10px] max-sm:pr-[10px] max-sm:gap-[100px]">
+        <div className="flex flex-col gap-2 max-sm:pl-[20px]">
           {data.map((item, index) => {
             return (
               <div
                 key={index}
                 onMouseOver={() => setActiveProduce(item.id)}
-                className="h-[80px] rounded-[30px] flex px-4 items-center cursor-pointer bg-center bg-cover"
+                className="h-[80px] max-sm:h-[40px] rounded-[30px] flex px-4 max-sm:px-[10px] items-center cursor-pointer bg-center bg-cover"
                 style={{
                   backgroundImage:
                     item.id === activeProduce ? `url(${item.img})` : "",
                 }}
               >
-                <p className="text-[25px]" style={{ fontFamily: "Livemono" }}>
+                <p
+                  className="text-[25px] max-sm:text-[15px]"
+                  style={{ fontFamily: "Livemono" }}
+                >
                   {item.title}
                 </p>
               </div>

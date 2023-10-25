@@ -80,10 +80,10 @@ const data = [
 ];
 export const Brand = () => {
   return (
-    <div className="w-full min-h-screen relative flex flex-col justify-center items-center px-[130px]">
+    <div className="w-full min-h-screen max-sm:min-h-max relative flex flex-col justify-center items-center px-[130px] max-sm:px-[20px] max-sm:py-[80px]">
       <TextScramble
         text="[BRANDS WE WORK WITH]"
-        className="text-[20px] mb-[80px]"
+        className="text-[20px] mb-[80px] max-sm:text-[12px] max-sm:mb-[40px]"
       />
       {/* <div className="flex justify-center items-center flex-wrap gap-10 max-w-[1180px]">
         {data.map((item, index) => {
@@ -112,7 +112,7 @@ export const Brand = () => {
       <TextScramble
         text="TO OUR CLIENTS COLLABORATORS PARTNERS AND FRIENDS: THANK YOU FOR BEING A
         PART OF DREAM"
-        className="text-[11px] mt-[80px]"
+        className="text-center text-[11px] mt-[80px] max-sm:text-[10px] max-sm:mt-[40px]"
       />
     </div>
   );
