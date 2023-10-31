@@ -17,7 +17,10 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
     {
       name: "contact",
       isUpdate: false,
-      action: () => setShowContact(true),
+      action: () => {
+        setIsShowMenu(false);
+        setShowContact(true);
+      },
     },
     {
       name: "work",
@@ -99,10 +102,7 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
             return (
               <div
                 key={index}
-                onClick={() => {
-                  item.action();
-                  setIsShowMenu(false);
-                }}
+                onClick={item.action}
                 className={` ${
                   (index + 2) % 2 === 0 && "pl-[100px] max-sm:pl-0"
                 } text-left h-[88px] max-sm:h-[60px] cursor-pointer`}
