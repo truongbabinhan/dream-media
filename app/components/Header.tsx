@@ -1,24 +1,8 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Moment from "moment-timezone";
-const listMenu = [
-  {
-    name: "contact",
-    isUpdate: false,
-  },
-  {
-    name: "work",
-    isUpdate: true,
-  },
-  {
-    name: "about",
-    isUpdate: true,
-  },
-  {
-    name: "studio life",
-    isUpdate: true,
-  },
-];
+import { Modal } from "./Modal";
+
 interface HeaderProps {
   setIsChill: any;
   isChill: boolean;
@@ -28,6 +12,26 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
   const [isShowMenu, setIsShowMenu] = useState(false);
   const [dateNowVN, setDateNowVN] = useState("");
   const [dateNowNY, setDateNowNY] = useState("");
+  const [showContact, setShowContact] = useState(false);
+  const listMenu = [
+    {
+      name: "contact",
+      isUpdate: false,
+      action: () => setShowContact(true),
+    },
+    {
+      name: "work",
+      isUpdate: true,
+    },
+    {
+      name: "about",
+      isUpdate: true,
+    },
+    {
+      name: "studio life",
+      isUpdate: true,
+    },
+  ];
   useEffect(() => {
     const options = { passive: true };
     const scroll = () => {
@@ -95,6 +99,10 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
             return (
               <div
                 key={index}
+                onClick={() => {
+                  item.action();
+                  setIsShowMenu(false);
+                }}
                 className={` ${
                   (index + 2) % 2 === 0 && "pl-[100px] max-sm:pl-0"
                 } text-left h-[88px] max-sm:h-[60px] cursor-pointer`}
@@ -120,6 +128,7 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
           })}
         </div>
       </div>
+      <Modal open={showContact} setOpen={setShowContact} />
     </>
   );
 };
