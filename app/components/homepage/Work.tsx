@@ -1,7 +1,10 @@
 import Image from "next/image";
 import { TextScramble } from "..";
+import { useRouter } from "next/navigation";
 
 export const Work = () => {
+  const router = useRouter();
+
   const dataWork = [
     {
       name: "fanta",
@@ -98,6 +101,11 @@ export const Work = () => {
         });
     }
   };
+
+  const goToWorkDetail = (id: any) => {
+    return router.push(`/work/${id}`, { scroll: true });
+  };
+
   return (
     <div className="w-full flex flex-col relative">
       {dataWork.map((item, index) => {
@@ -105,6 +113,7 @@ export const Work = () => {
           <div
             key={index}
             className="min-h-screen max-sm:min-h-max w-full text-white relative group cursor-pointer"
+            onClick={() => goToWorkDetail(item.name)}
           >
             {item.video && (
               <video
