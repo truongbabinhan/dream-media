@@ -54,7 +54,7 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
   return (
     <>
       <Image
-        className="fixed left-[25px] top-[15px] z-10 max-sm:hidden"
+        className="fixed left-5 top-[15px] z-10 max-sm:hidden"
         src="/logo.svg"
         alt="Logo"
         width={201}
