@@ -13,6 +13,7 @@ interface contentItemProps {
 const WorkDetail = () => {
   const [isChill, setIsChill] = useState(true);
   const [dataDetail, setDataDetail] = useState();
+  const [listImg, setListImg] = useState([]);
   const searchParams = useSearchParams();
   const brand = searchParams.get("brand") || "";
 
@@ -21,6 +22,7 @@ const WorkDetail = () => {
       .then((res) => res.json())
       .then((data) => {
         setDataDetail(data?.[brand]);
+        setListImg(data?.[brand]?.["list"]);
       });
   }, []);
 
@@ -58,7 +60,7 @@ const WorkDetail = () => {
       <div className="h-screen max-sm:min-h-max w-full text-white flex flex-col">
         <div className="flex-1 relative">
           <div className="absolute w-full h-full overflow-hidden top-0 left-0 pt-[70px] pb-[20px]">
-            {contentItem({ item: dataDetail?.video, isBanner: true })}
+            {contentItem({ item: dataDetail?.["video"], isBanner: true })}
           </div>
         </div>
         <div className="pb-[50px] pl-5">
@@ -66,7 +68,7 @@ const WorkDetail = () => {
             style={{ lineHeight: 0.8, fontFamily: "BebasNeue" }}
             className="uppercase text-[80px] whitespace-pre-line"
           >
-            {dataDetail?.title}
+            {dataDetail?.["title"]}
           </p>
         </div>
       </div>
@@ -80,27 +82,29 @@ const WorkDetail = () => {
                 height={23}
                 alt="diamond"
               />
-              {dataDetail?.type}
+              {dataDetail?.["type"]}
             </p>
-            {dataDetail?.desc && (
+            {dataDetail?.["desc"] && (
               <p className="text-[13px] pb-5 whitespace-pre-line">
-                {dataDetail?.desc}
+                {dataDetail?.["desc"]}
               </p>
             )}
-            <p className="text-[13px]">Client: {dataDetail?.client}</p>
-            <p className="text-[13px]">Brand: {dataDetail?.brand}</p>
-            <p className="text-[13px]">Agency: {dataDetail?.agency}</p>
+            <p className="text-[13px]">Client: {dataDetail?.["client"]}</p>
+            <p className="text-[13px]">Brand: {dataDetail?.["brand"]}</p>
+            <p className="text-[13px]">Agency: {dataDetail?.["agency"]}</p>
             <p className="text-[13px]">
-              Production House: {dataDetail?.productionHouse}
+              Production House: {dataDetail?.["productionHouse"]}
             </p>
           </div>
         </div>
         <div className="flex-1 flex flex-col gap-5">
-          <div>{contentItem({ item: dataDetail?.img1, isBanner: false })}</div>
           <div>
-            {dataDetail?.img2 && (
+            {contentItem({ item: dataDetail?.["img1"], isBanner: false })}
+          </div>
+          <div>
+            {dataDetail?.["img2"] && (
               <Image
-                src={dataDetail?.img2 || ""}
+                src={dataDetail?.["img2"] || ""}
                 alt="work"
                 layout="fill"
                 objectFit="contain"
@@ -109,9 +113,9 @@ const WorkDetail = () => {
             )}
           </div>
           <div>
-            {dataDetail?.img3 && (
+            {dataDetail?.["img3"] && (
               <Image
-                src={dataDetail?.img3 || ""}
+                src={dataDetail?.["img3"] || ""}
                 alt="work"
                 layout="fill"
                 objectFit="contain"
@@ -122,15 +126,15 @@ const WorkDetail = () => {
         </div>
       </div>
       <div className="w-full py-5 pl-5">
-        {contentItem({ item: dataDetail?.img4, isBanner: false })}
+        {contentItem({ item: dataDetail?.["img4"], isBanner: false })}
       </div>
       <div className="flex gap-[50px] w-full pl-5">
         <div className="w-[400px]"></div>
         <div className="flex-1 flex flex-col gap-5">
           <div>
-            {dataDetail?.img5 && (
+            {dataDetail?.["img5"] && (
               <Image
-                src={dataDetail?.img5 || ""}
+                src={dataDetail?.["img5"] || ""}
                 alt="work"
                 layout="fill"
                 objectFit="contain"
@@ -138,28 +142,28 @@ const WorkDetail = () => {
               />
             )}
           </div>
-          <div>{contentItem({ item: dataDetail?.img6, isBanner: false })}</div>
+          <div>
+            {contentItem({ item: dataDetail?.["img6"], isBanner: false })}
+          </div>
         </div>
       </div>
       <div className="flex flex-wrap pt-5">
-        {dataDetail?.list &&
-          dataDetail?.list?.map(
-            (item: string, index: Key | null | undefined) => {
-              return (
-                <div key={index} className="w-1/3 overflow-hidden">
-                  {item && (
-                    <Image
-                      src={item || ""}
-                      alt="item"
-                      layout="fill"
-                      objectFit="cover"
-                      className="!relative cursor-pointer hover:scale-[120%] transition-all ease-in duration-300"
-                    />
-                  )}
-                </div>
-              );
-            }
-          )}
+        {listImg &&
+          listImg.map((item: string, index: Key | null | undefined) => {
+            return (
+              <div key={index} className="w-1/3 overflow-hidden">
+                {item && (
+                  <Image
+                    src={item || ""}
+                    alt="item"
+                    layout="fill"
+                    objectFit="cover"
+                    className="!relative cursor-pointer hover:scale-[120%] transition-all ease-in duration-300"
+                  />
+                )}
+              </div>
+            );
+          })}
       </div>
       <div className="py-[80px]">
         <Link href="/">
