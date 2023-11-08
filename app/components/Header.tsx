@@ -1,13 +1,15 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Moment from "moment-timezone";
-import { Modal } from "./Modal";
+import { ModalContact } from "./ModalContact";
+import { useRouter } from "next/navigation";
 
 interface HeaderProps {
   setIsChill: any;
   isChill: boolean;
 }
 export const Header = ({ setIsChill, isChill }: HeaderProps) => {
+  const router = useRouter();
   const [percentScroll, setPercentScroll] = useState(0);
   const [isShowMenu, setIsShowMenu] = useState(false);
   const [dateNowVN, setDateNowVN] = useState("");
@@ -54,20 +56,22 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
   return (
     <>
       <Image
-        className="fixed left-5 top-[15px] z-10 max-sm:hidden"
+        className="fixed left-5 top-[15px] z-10 max-sm:hidden cursor-pointer"
         src="/logo.svg"
         alt="Logo"
         width={201}
         height={50}
         priority
+        onClick={() => router.push("/", { scroll: true })}
       />
       <Image
-        className="fixed left-[10px] top-[10px] z-10 hidden max-sm:block"
+        className="fixed left-[10px] top-[10px] z-10 hidden max-sm:block cursor-pointer"
         src="/logo-sp.svg"
         alt="Logo"
         width={120}
         height={30}
         priority
+        onClick={() => router.push("/", { scroll: true })}
       />
       <p
         onClick={() => setIsShowMenu(!isShowMenu)}
@@ -128,7 +132,7 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
           })}
         </div>
       </div>
-      <Modal open={showContact} setOpen={setShowContact} />
+      <ModalContact open={showContact} setOpen={setShowContact} />
     </>
   );
 };

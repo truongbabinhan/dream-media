@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Header, Footer } from "./components";
 import {
   LoadingScreen,
-  Dashboard,
+  Banner,
   Work,
   ShowReel,
   WeProduce,
@@ -20,7 +20,7 @@ export default function Home() {
       {isShowHome ? (
         <>
           <ShowReel isChill={isChill} />
-          <Dashboard />
+          <Banner />
           <Work />
           <WeProduce />
           <Brand />

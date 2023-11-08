@@ -15,6 +15,7 @@ export const Work = () => {
       productionHouse: "dream media",
       background: "/work/fanta.png",
       video: "/video/fanta.mp4",
+      link: "fanta",
     },
     {
       name: "surf",
@@ -24,7 +25,8 @@ export const Work = () => {
       agency: "t&a ogivy",
       productionHouse: "dream media",
       background: "/work/surf.png",
-      video: "",
+      video: "/video/surf.mp4",
+      link: "surf",
     },
     {
       name: "LUNG CANCER",
@@ -34,7 +36,8 @@ export const Work = () => {
       agency: "TBWA",
       productionHouse: "dream media",
       background: "/work/cancer.png",
-      video: "",
+      video: "/video/lung-cancer1.mp4",
+      link: "lung-cancer",
     },
     {
       name: "LIPOVITAN",
@@ -44,7 +47,8 @@ export const Work = () => {
       agency: "Fortune Media",
       productionHouse: "dream media",
       background: "/work/lipovitan.png",
-      video: "",
+      video: "/video/lipovitan.mp4",
+      link: "lipovitan",
     },
     {
       name: "fanta",
@@ -54,17 +58,19 @@ export const Work = () => {
       agency: "t&a ogivy",
       productionHouse: "dream media",
       background: "/work/fanta-newyear.png",
-      video: "",
+      video: "/video/fanta-newyear.mp4",
+      link: "fanta-newyear",
     },
     {
-      name: "VSMART",
-      title: "STAR 3 ",
-      client: "vsmart",
-      brand: "Vsmart Star 3",
-      agency: "",
+      name: "BIA SAI GON CHILL",
+      title: "VALENTINE",
+      client: "sabeco",
+      brand: "Bia Sai Gon Chill",
+      agency: "T&A Ogilvy",
       productionHouse: "dream media",
-      background: "/work/vsmart.png",
+      background: "/work/saigon-chill.png",
       video: "",
+      link: "saigon-chill",
     },
   ];
 
@@ -103,7 +109,7 @@ export const Work = () => {
   };
 
   const goToWorkDetail = (id: any) => {
-    return router.push(`/work/${id}`, { scroll: true });
+    return router.push(`/work/detail?brand=${id}`, { scroll: true });
   };
 
   return (
@@ -113,7 +119,7 @@ export const Work = () => {
           <div
             key={index}
             className="min-h-screen max-sm:min-h-max w-full text-white relative group cursor-pointer"
-            onClick={() => goToWorkDetail(item.name)}
+            onClick={() => goToWorkDetail(item.link)}
           >
             {item.video && (
               <video
