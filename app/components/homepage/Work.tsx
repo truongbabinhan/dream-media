@@ -36,7 +36,7 @@ export const Work = () => {
       agency: "TBWA",
       productionHouse: "dream media",
       background: "/work/cancer.png",
-      video: "",
+      video: "/video/lung-cancer1.mp4",
       link: "lung-cancer",
     },
     {
@@ -47,7 +47,7 @@ export const Work = () => {
       agency: "Fortune Media",
       productionHouse: "dream media",
       background: "/work/lipovitan.png",
-      video: "",
+      video: "/video/lipovitan.mp4",
       link: "lipovitan",
     },
     {

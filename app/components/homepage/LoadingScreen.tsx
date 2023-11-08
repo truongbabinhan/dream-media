@@ -16,7 +16,7 @@ export const LoadingScreen = ({ setIsShowHome }: LoadingScreenProps) => {
           return counter + randomNumberInRange(1, 5);
         } else return 100;
       });
-    }, randomNumberInRange(50, 100));
+    }, randomNumberInRange(80, 120));
     return () => {
       clearInterval(interval);
     };
@@ -33,7 +33,7 @@ export const LoadingScreen = ({ setIsShowHome }: LoadingScreenProps) => {
       <div className="m-auto w-[600px]">
         <div
           style={{ width: `${percentLoading > 100 ? 100 : percentLoading}%` }}
-          className="h-3 rounded-sm bg-white block mb-2"
+          className="h-3 rounded-sm bg-white block mb-2 transition-all"
         ></div>
         <div className="flex justify-between">
           <p>DREAMING...</p>

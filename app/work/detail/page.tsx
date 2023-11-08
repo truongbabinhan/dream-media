@@ -4,19 +4,27 @@ import { useSearchParams } from "next/navigation";
 import { Footer, Header } from "../../components";
 import Image from "next/image";
 import Link from "next/link";
-import data from "./data.json";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+
+interface contentItemProps {
+  item: any;
+  isBanner: boolean;
+}
 
 const WorkDetail = () => {
   const [isChill, setIsChill] = useState(true);
   const [dataDetail, setDataDetail] = useState();
   const searchParams = useSearchParams();
-  const brand = searchParams.get("brand");
-  useEffect(() => {
-    setDataDetail(data[brand]);
-  }, [brand]);
+  const brand = searchParams.get("brand") || "";
 
-  const contentItem = (item: string) => {
+  useEffect(() => {
+    fetch("/data/data-work.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setDataDetail(data?.[brand]);
+      });
+  }, []);
+
+  const contentItem = ({ item, isBanner }: contentItemProps) => {
     if (item && item.includes("mp4")) {
       return (
         <video
@@ -31,13 +39,15 @@ const WorkDetail = () => {
       );
     } else {
       return (
-        <Image
-          src={item || ""}
-          alt="work"
-          layout="fill"
-          objectFit="contain"
-          className="!relative !h-auto"
-        />
+        item && (
+          <Image
+            src={item || ""}
+            alt="item"
+            layout="fill"
+            objectFit="contain"
+            className={`!relative ${!isBanner && "!h-auto"} `}
+          />
+        )
       );
     }
   };
@@ -48,17 +58,7 @@ const WorkDetail = () => {
       <div className="h-screen max-sm:min-h-max w-full text-white flex flex-col">
         <div className="flex-1 relative">
           <div className="absolute w-full h-full overflow-hidden top-0 left-0 pt-[70px] pb-[20px]">
-            <video
-              typeof="video/mp4"
-              className="h-auto max-w-full max-h-full mx-auto"
-              preload="auto"
-              muted
-              loop
-              autoPlay
-              // onMouseOver={(event) => onPlayVideoHover(event.target)}
-              // onMouseOut={(event) => onPauseVideoHover(event.target)}
-              src={dataDetail?.video}
-            />
+            {contentItem({ item: dataDetail?.video, isBanner: true })}
           </div>
         </div>
         <div className="pb-[50px] pl-5">
@@ -96,7 +96,7 @@ const WorkDetail = () => {
           </div>
         </div>
         <div className="flex-1 flex flex-col gap-5">
-          <div>{contentItem(dataDetail?.img1)}</div>
+          <div>{contentItem({ item: dataDetail?.img1, isBanner: false })}</div>
           <div>
             {dataDetail?.img2 && (
               <Image
@@ -121,7 +121,9 @@ const WorkDetail = () => {
           </div>
         </div>
       </div>
-      <div className="w-full py-5 pl-5">{contentItem(dataDetail?.img4)}</div>
+      <div className="w-full py-5 pl-5">
+        {contentItem({ item: dataDetail?.img4, isBanner: false })}
+      </div>
       <div className="flex gap-[50px] w-full pl-5">
         <div className="w-[400px]"></div>
         <div className="flex-1 flex flex-col gap-5">
@@ -136,23 +138,13 @@ const WorkDetail = () => {
               />
             )}
           </div>
-          <div>
-            {dataDetail?.img6 && (
-              <Image
-                src={dataDetail?.img6 || ""}
-                alt="work"
-                layout="fill"
-                objectFit="contain"
-                className="!relative !h-auto"
-              />
-            )}
-          </div>
+          <div>{contentItem({ item: dataDetail?.img6, isBanner: false })}</div>
         </div>
       </div>
       <div className="flex flex-wrap pt-5">
         {dataDetail?.list &&
           dataDetail?.list?.map(
-            (item: string | StaticImport, index: Key | null | undefined) => {
+            (item: string, index: Key | null | undefined) => {
               return (
                 <div key={index} className="w-1/3 overflow-hidden">
                   {item && (

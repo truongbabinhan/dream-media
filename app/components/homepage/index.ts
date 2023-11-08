@@ -1,4 +1,4 @@
-export { Dashboard } from "./Dashboard";
+export { Banner } from "./Banner";
 export { LoadingScreen } from "./LoadingScreen";
 export { Work } from "./Work";
 export { ShowReel } from "./ShowReel";
