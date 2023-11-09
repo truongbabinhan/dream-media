@@ -106,9 +106,9 @@ export const ModalContact = ({ open, setOpen }: ModalProps) => {
     <Popup open={open} closeOnDocumentClick onClose={closeModal}>
       <div
         style={{ fontFamily: "Livemono" }}
-        className="w-[950px] max-lg:w-[calc(100%-40px)] max-lg:mx-auto bg-[#161616] rounded-[20px] overflow-hidden text-[15px] transition-all ease-in-out delay-150"
+        className="w-[950px] max-lg:w-[calc(100%-40px)] max-lg:mx-auto backdrop-blur-[30px] bg-[linear-gradient(142deg,rgba(180,180,180,0.60)_4.12%,rgba(217,217,217,0.10)_96.41%)] rounded-[20px] overflow-hidden text-[15px] transition-all ease-in-out delay-150"
       >
-        <div className="relative bg-[linear-gradient(180deg,_rgba(217,217,217,0.40)_0%,rgba(217,217,217,0.10)_100%)] h-10">
+        <div className="h-10">
           <a
             className="absolute right-[18px] top-[13px] cursor-pointer"
             onClick={closeModal}
@@ -140,18 +140,20 @@ export const ModalContact = ({ open, setOpen }: ModalProps) => {
                 <label className="flex-1">Your Name:</label>
                 <input
                   type="text"
-                  className="bg-transparent border-none outline-none w-[40%] max-lg:w-full"
+                  className="bg-transparent border-none outline-none w-[40%] max-lg:w-full placeholder:text-[#C9C9C9] placeholder:text-[12px]"
                   placeholder="Enter name"
                   {...register("name")}
+                  required
                 />
               </div>
               <div className="flex max-lg:flex-col max-lg:gap-4 justify-between items-center max-lg:justify-start max-lg:items-start px-[30px] py-[25px] border-b border-b-[#FFFFFF]">
                 <label className="flex-1">Your Email:</label>
                 <input
                   type="text"
-                  className="bg-transparent border-none outline-none w-[40%] max-lg:w-full"
+                  className="bg-transparent border-none outline-none w-[40%] max-lg:w-full placeholder:text-[#C9C9C9] placeholder:text-[12px]"
                   placeholder="Enter email"
                   {...register("email")}
+                  required
                 />
               </div>
               <div className="flex max-lg:flex-col max-lg:gap-4 justify-between items-start max-lg:justify-start max-lg:items-start px-[30px] py-[25px] border-b border-b-[#FFFFFF]">
@@ -227,16 +229,16 @@ export const ModalContact = ({ open, setOpen }: ModalProps) => {
                 <label className="flex-1">Project Details</label>
                 <textarea
                   rows={5}
-                  className="bg-transparent border-none outline-none w-[40%] max-lg:w-full"
+                  className="bg-transparent border-none outline-none w-[40%] max-lg:w-full placeholder:text-[#C9C9C9] placeholder:text-[12px]"
                   placeholder="Enter name"
                   {...register("details")}
                 />
               </div>
-              <div className="flex max-lg:flex-col max-lg:gap-4 justify-between items-start max-lg:justify-start max-lg:items-start px-[30px] py-[25px] border-b border-b-[#FFFFFF]">
+              <div className="flex max-lg:flex-col max-lg:gap-4 justify-between items-start max-lg:justify-start max-lg:items-start px-[30px] py-[25px]">
                 <label className="flex-1">Other Information</label>
                 <textarea
                   rows={5}
-                  className="bg-transparent border-none outline-none w-[40%] max-lg:w-full"
+                  className="bg-transparent border-none outline-none w-[40%] max-lg:w-full placeholder:text-[#C9C9C9] placeholder:text-[12px]"
                   placeholder="Enter name"
                   {...register("other")}
                 />
@@ -244,7 +246,7 @@ export const ModalContact = ({ open, setOpen }: ModalProps) => {
             </form>
           </div>
         </div>
-        <div className="h-[70px] flex justify-end items-center px-[35px] border-t-[#2B2B2B] border-t">
+        <div className="h-[70px] flex justify-end items-center px-[35px] border-t-white border-t">
           <div
             onClick={() => onSubmit()}
             className="rounded-[30px] px-[15px] h-[35px] bg-[#EBEEF3] cursor-pointer text-center inline-block"

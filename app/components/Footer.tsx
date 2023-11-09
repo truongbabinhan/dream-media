@@ -3,7 +3,7 @@ import { TextScramble } from "./TextScramble";
 
 export const Footer = () => {
   return (
-    <div className="w-full flex flex-col relative justify-center items-center pt-[100px] pb-[10px] max-sm:py-[50px]">
+    <div className="w-full flex flex-col relative justify-center items-center pt-[100px] pb-[10px] max-sm:py-[50px] max-sm:px-5">
       <Image
         src="/logo-home.svg"
         alt="Logo"
