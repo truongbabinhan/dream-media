@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Moment from "moment-timezone";
 import { ModalContact } from "./ModalContact";
 import { useRouter } from "next/navigation";
+import { ModalSuccess } from ".";
 
 interface HeaderProps {
   setIsChill: any;
@@ -15,6 +16,7 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
   const [dateNowVN, setDateNowVN] = useState("");
   const [dateNowNY, setDateNowNY] = useState("");
   const [showContact, setShowContact] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
   const listMenu = [
     {
       name: "contact",
@@ -132,7 +134,12 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
           })}
         </div>
       </div>
-      <ModalContact open={showContact} setOpen={setShowContact} />
+      <ModalContact
+        open={showContact}
+        setOpen={setShowContact}
+        setShowSuccess={setShowSuccess}
+      />
+      <ModalSuccess open={showSuccess} setOpen={setShowSuccess} />
     </>
   );
 };
