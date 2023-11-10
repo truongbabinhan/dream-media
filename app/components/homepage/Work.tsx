@@ -7,6 +7,17 @@ export const Work = () => {
 
   const dataWork = [
     {
+      name: "LIPOVITAN",
+      title: "",
+      client: "",
+      brand: "Lipovitan",
+      agency: "Fortune Media",
+      productionHouse: "dream media",
+      background: "/work/lipovitan.png",
+      video: "/video/lipovitan.mp4",
+      link: "lipovitan",
+    },
+    {
       name: "fanta",
       title: "colorful",
       client: "",
@@ -36,20 +47,10 @@ export const Work = () => {
       agency: "TBWA",
       productionHouse: "dream media",
       background: "/work/cancer.png",
-      video: "/video/lung-cancer1.mp4",
+      video: "/video/lung-cancer.mp4",
       link: "lung-cancer",
     },
-    {
-      name: "LIPOVITAN",
-      title: "",
-      client: "",
-      brand: "Lipovitan",
-      agency: "Fortune Media",
-      productionHouse: "dream media",
-      background: "/work/lipovitan.png",
-      video: "/video/lipovitan.mp4",
-      link: "lipovitan",
-    },
+
     {
       name: "fanta",
       title: "Lunar new year",

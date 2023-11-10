@@ -1,25 +1,27 @@
 import Image from "next/image";
-import Lottie, { useLottie } from "lottie-react";
-// import Lottie from "react-lottie";
+import { useLottie } from "lottie-react";
 import { useInView } from "react-intersection-observer";
-import lottie from "lottie-web";
 import { TextScramble } from "..";
 import LogoAnimate from "../../assets/json/logo-white.json";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 export const Banner = () => {
-  const { ref, inView } = useInView({
-    threshold: 0,
-  });
+  const { ref, inView } = useInView();
   const options = {
     animationData: LogoAnimate,
-    loop: true,
-    autoplay: true,
+    loop: false,
+    autoplay: false,
   };
-  const { View, play, goToAndStop, pause } = useLottie(options);
-  // useEffect(() => {
-  //   play();
-  // }, [inView]);
+  const { View, playSegments } = useLottie({
+    ...options,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      playSegments([0, 125], true);
+    }
+  }, [inView]);
+
   return (
     <div className="w-full flex min-h-screen max-sm:min-h-max bg-homepage-dashboard bg-center bg-cover relative">
       <div className="w-full h-full backdrop-brightness-[0.1] absolute left-0 top-0 z-[1]"></div>
@@ -73,7 +75,6 @@ export const Banner = () => {
           className="absolute right-1/2 top-[140px] translate-x-[calc(50%)] hidden max-sm:block"
         />
         <Image
-          ref={ref}
           src="/logo-home.svg"
           alt="Logo"
           width={753}
@@ -84,6 +85,7 @@ export const Banner = () => {
         <div className="w-[1280px] max-sm:w-full max-sm:max-w-[425px] absolute top-[-65px] max-sm:top-[-20px] left-1/2 -translate-x-1/2">
           {View}
         </div>
+        <div ref={ref}></div>
         <TextScramble
           text="DREAM MEDIA IS A PRODUCTION COMPANY WITH HQ IN HCMC AND OPERATIONS
           THROUGHOUT VIETNAM. WE REPRESENT A SPECIFIC ROSTER OF VIRAL FILM

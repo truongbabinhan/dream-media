@@ -1,4 +1,5 @@
 import React from "react";
+import emailjs from "emailjs-com";
 import Popup from "reactjs-popup";
 import { useForm } from "react-hook-form";
 
@@ -91,8 +92,9 @@ const timelineData = [
 interface ModalProps {
   open: boolean;
   setOpen: any;
+  setShowSuccess: any;
 }
-export const ModalContact = ({ open, setOpen }: ModalProps) => {
+export const ModalContact = ({ open, setOpen, setShowSuccess }: ModalProps) => {
   const closeModal = () => setOpen(false);
 
   const {
@@ -100,8 +102,36 @@ export const ModalContact = ({ open, setOpen }: ModalProps) => {
     setValue,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<FormData>();
-  const onSubmit = handleSubmit((data) => console.log(data));
+
+  const onSubmit = handleSubmit((data) => {
+    setShowSuccess(true);
+    emailjs
+      .send(
+        "service_2nztira", // Replace with your Email.js service ID
+        "template_24t3rbp", // Replace with your Email.js template ID
+        {
+          name: data.name,
+          email: data.email,
+          jobType: data.jobType,
+          budget: data.budget,
+          timeline: data.timeline,
+          details: data.details,
+          other: data.other,
+        },
+        "u5AljR3VvRhLgQGV4" // Replace with your Email.js user ID
+      )
+      .then((response) => {
+        reset();
+        closeModal();
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+      });
+    reset();
+    closeModal();
+  });
   return (
     <Popup open={open} closeOnDocumentClick onClose={closeModal}>
       <div
@@ -129,7 +159,7 @@ export const ModalContact = ({ open, setOpen }: ModalProps) => {
         </div>
         <div className="py-[30px] px-[35px] max-h-[562px] overflow-auto">
           <div className="flex flex-col gap-5">
-            <p>For all inquiries, please contact hello@dreammedia.vn</p>
+            <p>For all inquiries, please contact [hello@dreammedia.vn]</p>
             <p>
               For DREAM MEDIA content and updates, drop in your email below.{" "}
               <br />
@@ -142,8 +172,7 @@ export const ModalContact = ({ open, setOpen }: ModalProps) => {
                   type="text"
                   className="bg-transparent border-none outline-none w-[40%] max-lg:w-full placeholder:text-[#C9C9C9] placeholder:text-[12px]"
                   placeholder="Enter name"
-                  {...register("name")}
-                  required
+                  {...register("name", { required: "- Your name is required" })}
                 />
               </div>
               <div className="flex max-lg:flex-col max-lg:gap-4 justify-between items-center max-lg:justify-start max-lg:items-start px-[30px] py-[25px] border-b border-b-[#FFFFFF]">
@@ -152,24 +181,30 @@ export const ModalContact = ({ open, setOpen }: ModalProps) => {
                   type="text"
                   className="bg-transparent border-none outline-none w-[40%] max-lg:w-full placeholder:text-[#C9C9C9] placeholder:text-[12px]"
                   placeholder="Enter email"
-                  {...register("email")}
-                  required
+                  {...register("email", {
+                    required: "- Your email is required",
+                    pattern: {
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                      message: "- Your email is invalid",
+                    },
+                  })}
                 />
               </div>
               <div className="flex max-lg:flex-col max-lg:gap-4 justify-between items-start max-lg:justify-start max-lg:items-start px-[30px] py-[25px] border-b border-b-[#FFFFFF]">
                 <label className="flex-1">What can we do for you?</label>
                 <div className="flex flex-col w-[40%] max-lg:w-full gap-2">
-                  {jobTypeData.map((item) => {
+                  {jobTypeData.map((item, index) => {
                     return (
                       <div
                         key={item.id}
                         className="flex justify-start items-center gap-2"
                       >
                         <input
-                          {...register("jobType")}
+                          {...register("jobType", { required: true })}
                           type="radio"
                           value={item.value}
                           id={item.id}
+                          defaultChecked={index === 0}
                         />
                         <label className="cursor-pointer" htmlFor={item.id}>
                           {item.value}
@@ -182,17 +217,18 @@ export const ModalContact = ({ open, setOpen }: ModalProps) => {
               <div className="flex max-lg:flex-col max-lg:gap-4 justify-between items-start max-lg:justify-start max-lg:items-start px-[30px] py-[25px] border-b border-b-[#FFFFFF]">
                 <label className="flex-1">Budget in USD</label>
                 <div className="flex flex-col w-[40%] max-lg:w-full gap-2">
-                  {budgetData.map((item) => {
+                  {budgetData.map((item, index) => {
                     return (
                       <div
                         key={item.id}
                         className="flex justify-start items-center gap-2"
                       >
                         <input
-                          {...register("budget")}
+                          {...register("budget", { required: true })}
                           type="radio"
                           value={item.value}
                           id={item.id}
+                          defaultChecked={index === 0}
                         />
                         <label className="cursor-pointer" htmlFor={item.id}>
                           {item.value}
@@ -205,17 +241,18 @@ export const ModalContact = ({ open, setOpen }: ModalProps) => {
               <div className="flex max-lg:flex-col max-lg:gap-4 justify-between items-start max-lg:justify-start max-lg:items-start px-[30px] py-[25px] border-b border-b-[#FFFFFF]">
                 <label className="flex-1">Your estimated timeline</label>
                 <div className="flex flex-col w-[40%] max-lg:w-full gap-2">
-                  {timelineData.map((item) => {
+                  {timelineData.map((item, index) => {
                     return (
                       <div
                         key={item.id}
                         className="flex justify-start items-center gap-2"
                       >
                         <input
-                          {...register("timeline")}
+                          {...register("timeline", { required: true })}
                           type="radio"
                           value={item.value}
                           id={item.id}
+                          defaultChecked={index === 0}
                         />
                         <label className="cursor-pointer" htmlFor={item.id}>
                           {item.value}
@@ -226,11 +263,16 @@ export const ModalContact = ({ open, setOpen }: ModalProps) => {
                 </div>
               </div>
               <div className="flex max-lg:flex-col max-lg:gap-4 justify-between items-start max-lg:justify-start max-lg:items-start px-[30px] py-[25px] border-b border-b-[#FFFFFF]">
-                <label className="flex-1">Project Details</label>
+                <label className="flex-1">
+                  Project Details{" "}
+                  <span className="block text-[10px] text-[#C9C9C9] pl-4">
+                    Your Porject, Goals.Success Criteria{" "}
+                  </span>
+                </label>
                 <textarea
                   rows={5}
                   className="bg-transparent border-none outline-none w-[40%] max-lg:w-full placeholder:text-[#C9C9C9] placeholder:text-[12px]"
-                  placeholder="Enter name"
+                  placeholder="Enter Details"
                   {...register("details")}
                 />
               </div>
@@ -239,7 +281,7 @@ export const ModalContact = ({ open, setOpen }: ModalProps) => {
                 <textarea
                   rows={5}
                   className="bg-transparent border-none outline-none w-[40%] max-lg:w-full placeholder:text-[#C9C9C9] placeholder:text-[12px]"
-                  placeholder="Enter name"
+                  placeholder="Enter Details"
                   {...register("other")}
                 />
               </div>
@@ -247,12 +289,20 @@ export const ModalContact = ({ open, setOpen }: ModalProps) => {
           </div>
         </div>
         <div className="h-[70px] flex justify-end items-center px-[35px] border-t-white border-t">
+          <div className="flex-1 flex flex-col">
+            {errors.name && (
+              <p className="text-[11px] text-red-500">{errors.name.message}</p>
+            )}
+            {errors.email && (
+              <p className="text-[11px] text-red-500">{errors.email.message}</p>
+            )}
+          </div>
           <div
             onClick={() => onSubmit()}
-            className="rounded-[30px] px-[15px] h-[35px] bg-[#EBEEF3] cursor-pointer text-center inline-block"
+            className="rounded-[30px] transition-all duration-300 px-[15px] h-[35px] bg-white/20 cursor-pointer text-center inline-block border border-[#D9D9D9]"
           >
-            <p style={{ lineHeight: "35px" }} className="text-[#1E1E1E]">
-              SUBMIT
+            <p style={{ lineHeight: "35px" }} className="text-[#D9D9D9]">
+              Submit
             </p>
           </div>
         </div>
