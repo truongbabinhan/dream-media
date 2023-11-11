@@ -16,6 +16,21 @@ export const Work = () => {
       background: "/work/lipovitan.png",
       video: "/video/lipovitan.mp4",
       link: "lipovitan",
+      desc: [
+        "STORYBOARD DEVELOPMENT",
+        "PRE-PRODUCTION",
+        "REHEARSAL DAY",
+        "TABLETOP",
+        "SHOOTING",
+        "ART - SET DESIGN",
+        "CHOREOGRAPHY",
+        "COLOR GRADING",
+        "VIDEO EDITING",
+        "MOTION GRAPHICS",
+        "3D ANIMATION",
+        "SOUND MIX & SOUND DESIGN",
+        "MUSIC COMPOSE",
+      ],
     },
     {
       name: "fanta",
@@ -27,6 +42,21 @@ export const Work = () => {
       background: "/work/fanta.png",
       video: "/video/fanta.mp4",
       link: "fanta",
+      desc: [
+        "STORYBOARD DEVELOPMENT",
+        "PRE-PRODUCTION",
+        "CASTING",
+        "WARDROBE",
+        "PRODUCTION",
+        "SHOOTING",
+        "ART - SET DESIGN",
+        "COLOR GRADING",
+        "VIDEO EDITING",
+        "MOTION GRAPHICS",
+        "3D ANIMATION",
+        "SOUND MIX & SOUND DESIGN",
+        "MUSIC COMPOSE",
+      ],
     },
     {
       name: "surf",
@@ -38,6 +68,23 @@ export const Work = () => {
       background: "/work/surf.png",
       video: "/video/surf.mp4",
       link: "surf",
+      desc: [
+        "STORYBOARD DEVELOPMENT",
+        "PRE-PRODUCTION",
+        "CASTING",
+        "WARDROBE",
+        "REHEARSAL DAY",
+        "SHOOTING",
+        "ART - SET DESIGN",
+        "COLOR GRADING",
+        "VIDEO EDITING",
+        "MOTION GRAPHICS",
+        "CGI",
+        "3D MODELING",
+        "3D ANIMATION",
+        "SOUND MIX & SOUND DESIGN",
+        "MUSIC COMPOSE",
+      ],
     },
     {
       name: "LUNG CANCER",
@@ -49,6 +96,18 @@ export const Work = () => {
       background: "/work/cancer.png",
       video: "/video/lung-cancer.mp4",
       link: "lung-cancer",
+      desc: [
+        "STORYBOARD DEVELOPMENT",
+        "PRE-PRODUCTION",
+        "CASTING",
+        "WARDROBE",
+        "ART - SET DESIGN",
+        "COLOR GRADING",
+        "VIDEO EDITING",
+        "VFX",
+        "SOUND MIX & SOUND DESIGN",
+        "MUSIC COMPOSE",
+      ],
     },
 
     {
@@ -61,6 +120,20 @@ export const Work = () => {
       background: "/work/fanta-newyear.png",
       video: "/video/fanta-newyear.mp4",
       link: "fanta-newyear",
+      desc: [
+        "STORYBOARD DEVELOPMENT",
+        "PRE-PRODUCTION",
+        "CASTING",
+        "WARDROBE",
+        "PRODUCTION",
+        "SHOOTING",
+        "ART - SET DESIGN",
+        "COLOR GRADING",
+        "VIDEO EDITING",
+        "MOTION GRAPHICS",
+        "SOUND MIX & SOUND DESIGN",
+        "MUSIC COMPOSE",
+      ],
     },
     {
       name: "BIA SAI GON CHILL",
@@ -72,6 +145,7 @@ export const Work = () => {
       background: "/work/saigon-chill.png",
       video: "",
       link: "saigon-chill",
+      desc: ["PRE-PRODUCTION", "ART - SET DESIGN", "SHOOTING", "DI", "RETOUCH"],
     },
   ];
 
@@ -142,7 +216,7 @@ export const Work = () => {
               objectFit="cover"
               objectPosition="top left"
               priority
-              className={`transition-[filter_2s_cubic-bezier(0.005,0.985,0.22,1),transform_2s_cubic-bezier(0.005,0.985,0.22,1)] absolute top-0 left-0 z-[1] ${
+              className={`transition-all duration-500 absolute top-0 left-0 z-[1] ${
                 item.video && "group-hover:hidden"
               } group-hover:!blur-0 blur-[30px] max-sm:hidden`}
             />
@@ -154,7 +228,7 @@ export const Work = () => {
               priority
               className="w-full h-auto !relative hidden max-sm:block"
             />
-            <div className="z-[2] p-[25px] uppercase sticky top-[70px] max-sm:p-[10px] max-sm:top-[0px] max-sm:absolute">
+            <div className="z-[2] p-5 uppercase sticky top-[70px] max-sm:p-[10px] max-sm:top-[0px] max-sm:absolute">
               <p
                 style={{ lineHeight: 0.8, fontFamily: "BebasNeue" }}
                 className="text-[100px] font-bold mb-1 ml-[-2px] max-sm:text-[30px]"
@@ -167,7 +241,31 @@ export const Work = () => {
               >
                 {item.title}
               </p>
-              {item.client && (
+              <Image
+                src="./decor-work.svg"
+                alt="decor"
+                width={57}
+                height={75}
+                priority
+                className="max-sm:hidden"
+              />
+              <div className="max-w-[410px] mt-2 max-sm:hidden">
+                <ul
+                  className={item.desc.length > 8 ? "columns-2" : "columns-1"}
+                >
+                  {item.desc.map((note, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className="text-[12px] text-white pb-1 block"
+                      >
+                        <TextScramble text={note} className="inline-block" />
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+              {/* {item.client && (
                 <TextScramble
                   text={`CLIENT: ${item.client}`}
                   className="text-[14px] max-sm:text-[10px]"
@@ -185,10 +283,12 @@ export const Work = () => {
                   className="text-[14px] max-sm:text-[10px]"
                 />
               )}
-              <TextScramble
-                text={`PRODUCTION HOUSE: ${item.productionHouse}`}
-                className="text-[14px] max-sm:text-[10px]"
-              />
+              {item.productionHouse && (
+                <TextScramble
+                  text={`PRODUCTION HOUSE: ${item.productionHouse}`}
+                  className="text-[14px] max-sm:text-[10px]"
+                />
+              )} */}
             </div>
           </div>
         );
