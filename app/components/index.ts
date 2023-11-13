@@ -4,3 +4,4 @@ export { TextScroller } from "./TextScroller";
 export { TextScramble } from "./TextScramble";
 export { ModalContact } from "./ModalContact";
 export { ModalSuccess } from "./ModalSuccess";
+export { SliderWeProduce } from "./SliderWeProduce";

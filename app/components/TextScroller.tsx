@@ -7,8 +7,7 @@ export const TextScroller = () => {
     from: { transform: "translate(30%,0)" },
     to: { transform: "translate(-30%,0)" },
     config: { duration: 8000 },
-    reset: true,
-    reverse: true,
+    loop: { reverse: true },
   });
 
   return (
