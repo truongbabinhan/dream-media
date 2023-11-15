@@ -4,6 +4,7 @@ import Moment from "moment-timezone";
 import { ModalContact } from "./ModalContact";
 import { useRouter } from "next/navigation";
 import { ModalSuccess } from ".";
+import { GoUnmute, GoMute } from "react-icons/go";
 
 interface HeaderProps {
   setIsChill: any;
@@ -92,9 +93,12 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
       </p>
       <p
         onClick={() => setIsChill(!isChill)}
-        className="fixed text-[15px] z-10 cursor-pointer right-5 bottom-5 select-none max-sm:text-[12px] max-sm:right-[10px] max-sm:bottom-[10px]"
+        className="fixed flex items-center text-[15px] z-10 cursor-pointer right-5 bottom-5 select-none max-sm:text-[12px] max-sm:right-[10px] max-sm:bottom-[10px]"
       >
-        CHILL: {isChill ? "ON" : "OFF"}
+        CHILL: {isChill ? "OFF" : "ON"}
+        <span className="pl-2 pb-[2px]">
+          {isChill ? <GoMute size={18} /> : <GoUnmute size={18} />}
+        </span>
       </p>
       <div
         className={`fixed z-20 top-[80px] left-[100px] bg-[linear-gradient(105deg,_color(display-p3_0.851_0.851_0.851_/_0.40)_15.93%,_color(display-p3_0.851_0.851_0.851_/_0.10)_94.84%)] backdrop-blur-lg max-sm:bg-black/90 min-w-screen transition-all overflow-hidden ${
