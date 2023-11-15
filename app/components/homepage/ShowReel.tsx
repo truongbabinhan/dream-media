@@ -1,7 +1,11 @@
+import { useState } from "react";
+import { ModalShowReel } from ".";
+
 interface ShowReelProps {
   isChill: boolean;
 }
 export const ShowReel = ({ isChill }: ShowReelProps) => {
+  const [showModal, setShowModal] = useState(false);
   const onPlayVideoHover = (video: any) => {
     // Show loading animation.
     var playPromise = video.play();
@@ -38,8 +42,9 @@ export const ShowReel = ({ isChill }: ShowReelProps) => {
   return (
     <div className="w-full flex min-h-screen max-sm:min-h-max max-sm:mt-[50px] relative justify-center group items-center object-cover">
       <video
+        onClick={() => setShowModal(true)}
         typeof="video/mp4"
-        className="w-full h-full max-w-full max-h-full"
+        className="w-full h-full max-w-full max-h-full cursor-pointer"
         preload="auto"
         muted={isChill}
         loop
@@ -48,6 +53,7 @@ export const ShowReel = ({ isChill }: ShowReelProps) => {
         onMouseOut={(event) => onPauseVideoHover(event.target)}
         src="/showreel.mp4"
       />
+      <ModalShowReel open={showModal} setOpen={setShowModal} />
     </div>
   );
 };

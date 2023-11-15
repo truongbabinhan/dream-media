@@ -94,3 +94,11 @@ body {
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
 }
+
+.swiper-button-next {
+  color: white !important;
+}
+
+.swiper-button-prev {
+  color: white !important;
+}

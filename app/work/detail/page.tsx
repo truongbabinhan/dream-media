@@ -2,6 +2,7 @@
 import { Key, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { Footer, Header } from "../../components";
+import { ModalListBts } from "../../components/work";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,7 +12,9 @@ interface contentItemProps {
 }
 
 const WorkDetail = () => {
+  const [openListBts, setOpenListBts] = useState(false);
   const [isChill, setIsChill] = useState(true);
+  const [initPic, setInitPic] = useState<any | null>(0);
   const [dataDetail, setDataDetail] = useState();
   const [listImg, setListImg] = useState([]);
   const searchParams = useSearchParams();
@@ -33,10 +36,11 @@ const WorkDetail = () => {
           typeof="video/mp4"
           className="h-auto max-w-full max-h-full mx-auto"
           preload="auto"
-          muted
-          loop
+          muted={isChill}
           autoPlay
+          color=""
           src={item}
+          controls
         />
       );
     } else {
@@ -168,7 +172,14 @@ const WorkDetail = () => {
         {listImg &&
           listImg.map((item: string, index: Key | null | undefined) => {
             return (
-              <div key={index} className="w-1/3 overflow-hidden">
+              <div
+                onClick={() => {
+                  setInitPic(index);
+                  setOpenListBts(true);
+                }}
+                key={index}
+                className="w-1/3 overflow-hidden"
+              >
                 {item && (
                   <Image
                     src={item || ""}
@@ -189,6 +200,12 @@ const WorkDetail = () => {
       </div>
 
       <Footer />
+      <ModalListBts
+        setOpen={setOpenListBts}
+        open={openListBts}
+        data={listImg}
+        initSlide={initPic}
+      />
     </main>
   );
 };
