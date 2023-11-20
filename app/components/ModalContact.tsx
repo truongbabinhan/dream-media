@@ -35,6 +35,10 @@ const jobTypeData = [
     id: "jobtype-liveStream",
   },
   {
+    value: "Music Video",
+    id: "music-video",
+  },
+  {
     value: "Short Films",
     id: "jobtype-shortFilms",
   },
@@ -62,7 +66,7 @@ const budgetData = [
     id: "budget-50k",
   },
   {
-    value: "$50-$100k",
+    value: "$50k-$100k",
     id: "budget-100k",
   },
   {
