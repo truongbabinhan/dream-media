@@ -115,7 +115,7 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
                 onClick={item.action}
                 className={` ${
                   (index + 2) % 2 === 0 && "pl-[100px] max-sm:pl-0"
-                } text-left h-[88px] max-sm:h-[60px] cursor-pointer`}
+                } text-left h-[88px] max-sm:h-[60px] cursor-pointer hover:text-black transition-all duration-500`}
               >
                 <div className="flex justify-center items-end">
                   <span className="text-[20px] max-sm:text-[12px] font-normal mr-4">

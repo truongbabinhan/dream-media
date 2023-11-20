@@ -77,7 +77,7 @@ const WorkDetail = () => {
         </div>
       </div>
       <div className="flex max-sm:flex-col gap-[50px] max-sm:gap-0 w-full pl-5 max-sm:pl-0">
-        <div className="w-[400px] max-sm:w-full relative max-sm:px-5 max-sm:pb-5">
+        <div className="w-[30%] max-sm:w-full relative max-sm:px-5 max-sm:pb-5">
           <div className="sticky top-[100px]">
             <p
               style={{ lineHeight: 1, fontFamily: "BebasNeue" }}
@@ -150,7 +150,7 @@ const WorkDetail = () => {
         {contentItem({ item: dataDetail?.["img4"], isBanner: false })}
       </div>
       <div className="flex max-sm:flex-col gap-[50px] w-full pl-5 max-sm:pl-0 max-sm:gap-0">
-        <div className="w-[400px] max-sm:w-full"></div>
+        <div className="w-[30%] max-sm:w-full"></div>
         <div className="flex-1 flex flex-col gap-5 max-sm:gap-1 max-sm:px-[10px]">
           <div>
             {dataDetail?.["img5"] && (

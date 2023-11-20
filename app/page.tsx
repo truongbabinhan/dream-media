@@ -29,6 +29,7 @@ export default function Home() {
       ) : (
         <LoadingScreen setIsShowHome={setIsShowHome} />
       )}
+      {/* <Work /> */}
     </main>
   );
 }

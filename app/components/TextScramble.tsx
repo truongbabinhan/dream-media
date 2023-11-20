@@ -16,12 +16,12 @@ export const TextScramble = ({
   });
   const { ref, replay } = useScramble({
     text: text,
-    speed: 3,
+    speed: 3.5,
     tick: 1,
     step: 1,
     scramble: 50,
     seed: 1,
-    range: [42, 42],
+    range: [42, 42, 59],
     overdrive: false,
     overflow: false,
   });

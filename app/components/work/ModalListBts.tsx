@@ -1,4 +1,4 @@
-import React, { Key, useRef } from "react";
+import React, { Key } from "react";
 import Image from "next/image";
 import Popup from "reactjs-popup";
 import { Swiper, SwiperSlide } from "swiper/react";
