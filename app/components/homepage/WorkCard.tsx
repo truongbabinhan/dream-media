@@ -2,11 +2,13 @@ import Image from "next/image";
 import { TextScramble } from "..";
 import { Key, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useInView } from "react-intersection-observer";
 interface WorkCardProps {
   item: any;
 }
 export const WorkCard = ({ item }: WorkCardProps) => {
   const router = useRouter();
+  const { ref, inView } = useInView();
 
   const onPlayVideoHover = (video: any) => {
     // Show loading animation.
@@ -49,12 +51,22 @@ export const WorkCard = ({ item }: WorkCardProps) => {
       className="min-h-screen max-sm:min-h-max w-full text-white relative group cursor-pointer"
       onClick={() => goToWorkDetail(item.link)}
     >
+      <div
+        ref={ref}
+        className="bg-transparent w-full h-1/5 absolute top-1/2 -translate-y-1/2 z-30"
+      ></div>
       <div className="w-full h-full overflow-hidden absolute left-0 top-0">
-        <div className="w-full h-full overflow-hidden absolute left-0 top-0 transition-all duration-700 scale-110 group-hover:scale-100 group-hover:!blur-0 blur-[30px]">
+        <div
+          className={`w-full h-full overflow-hidden absolute left-0 top-0 transition-all duration-700 scale-110 ${
+            inView && "!blur-0 !scale-100"
+          } blur-[30px]`}
+        >
           {item.video && (
             <video
               typeof="video/mp4"
-              className="w-full h-full max-w-full max-h-full object-cover absolute top-0 left-0 scale-110 group-hover:scale-100"
+              className={`w-full h-full max-w-full max-h-full duration-700 object-cover absolute top-0 left-0 scale-110 ${
+                inView && "!scale-100"
+              }`}
               preload="auto"
               muted
               loop
@@ -71,9 +83,9 @@ export const WorkCard = ({ item }: WorkCardProps) => {
             objectFit="cover"
             objectPosition="top left"
             priority
-            className={`transition-all duration-500 absolute top-0 left-0 z-[1] ${
-              item.video && "group-hover:hidden"
-            } group-hover:!blur-0 blur-[30px] max-sm:hidden`}
+            className={`transition-all duration-700 absolute top-0 left-0 z-[1] ${
+              item.video && inView && "hidden"
+            } ${inView && "!blur-0"} blur-[30px] max-sm:hidden`}
           />
           <Image
             src={item.background}
