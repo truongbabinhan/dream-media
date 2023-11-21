@@ -44,7 +44,7 @@ export const ProduceActive = ({ data }: ProduceActiveProps) => {
         </Swiper>
       </div>
       <TextScramble
-        text={`TV Commercial Production: We develop your next big idea, take it into production and handle distribution.`}
+        text={data.desc}
         className="text-[16px] pt-[20px] pl-[20px] pr-[190px] max-sm:text-[10px] max-sm:bottom-[-70px] max-sm:left-0 max-sm:pr-[20px] max-sm:ml-[20px] max-sm:max-w-full"
         styles={{ fontFamily: "Livemono" }}
       />

@@ -18,7 +18,7 @@ const data = [
   {
     id: 2,
     title: "VIRAL VIDEOS",
-    desc: "TV Commercial Production: We develop your next big idea, take it into production and handle distribution.",
+    desc: "Viral Video production: Break the Internet and let your brand or project become the talk of town.",
     img: [
       "/we-produce/menu2/img1.png",
       "/we-produce/menu2/img2.png",
@@ -32,7 +32,7 @@ const data = [
   {
     id: 3,
     title: "PHOTOGRAPHY",
-    desc: "TV Commercial Production: We develop your next big idea, take it into production and handle distribution.",
+    desc: "",
     img: [
       "/we-produce/menu3/img1.png",
       "/we-produce/menu3/img2.png",
@@ -48,7 +48,7 @@ const data = [
   {
     id: 4,
     title: "DIGITAL CONTENTS",
-    desc: "TV Commercial Production: We develop your next big idea, take it into production and handle distribution.",
+    desc: "Powering your next web campaign: Social Video, Web Commercials, Viral Content, Live Shows and more.",
     img: [
       "/we-produce/menu4/img1.png",
       "/we-produce/menu4/img2.png",
@@ -62,7 +62,7 @@ const data = [
   {
     id: 5,
     title: "POST-PRODUCTION",
-    desc: "TV Commercial Production: We develop your next big idea, take it into production and handle distribution.",
+    desc: "",
     img: [
       "/we-produce/menu5/img1.png",
       "/we-produce/menu5/img2.png",
@@ -79,7 +79,7 @@ const data = [
   {
     id: 6,
     title: "LIVE STREAM",
-    desc: "TV Commercial Production: We develop your next big idea, take it into production and handle distribution.",
+    desc: "",
     img: [
       "/we-produce/menu6/img1.png",
       "/we-produce/menu6/img2.png",
@@ -95,7 +95,7 @@ const data = [
   {
     id: 7,
     title: "SHORT FILMS",
-    desc: "TV Commercial Production: We develop your next big idea, take it into production and handle distribution.",
+    desc: "",
     img: [
       "/we-produce/menu7/img1.png",
       "/we-produce/menu7/img2.png",

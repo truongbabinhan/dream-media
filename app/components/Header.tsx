@@ -107,7 +107,7 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
             : "h-0"
         }  w-[calc(100%-200px)] flex flex-col justify-center items-center duration-500 max-sm:top-[50px] max-sm:left-[20px] max-sm:w-[calc(100%-40px)]`}
       >
-        <div className="flex flex-col justify-center items-start gap-[50px]">
+        <div className="flex flex-col justify-center items-start gap-[50px] max-2xl:gap-[40px]">
           {listMenu.map((item, index) => {
             return (
               <div
@@ -115,7 +115,7 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
                 onClick={item.action}
                 className={` ${
                   (index + 2) % 2 === 0 && "pl-[100px] max-sm:pl-0"
-                } text-left h-[88px] max-sm:h-[60px] cursor-pointer hover:text-black transition-all duration-500`}
+                } text-left h-[88px] max-2xl:h-[60px] cursor-pointer hover:text-black transition-all duration-500`}
               >
                 <div className="flex justify-center items-end">
                   <span className="text-[20px] max-sm:text-[12px] font-normal mr-4">
@@ -123,7 +123,7 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
                   </span>{" "}
                   <p
                     style={{ lineHeight: 0.9, fontFamily: "Aeros" }}
-                    className="text-[80px] max-sm:text-[30px] font-bold uppercase"
+                    className="text-[80px] max-2xl:text-[60px] max-sm:text-[30px] font-bold uppercase"
                   >
                     {item.name}
                   </p>
