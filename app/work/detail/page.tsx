@@ -9,6 +9,7 @@ import Link from "next/link";
 interface contentItemProps {
   item: any;
   isBanner: boolean;
+  isControl: boolean;
 }
 
 const WorkDetail = () => {
@@ -29,7 +30,7 @@ const WorkDetail = () => {
       });
   }, []);
 
-  const contentItem = ({ item, isBanner }: contentItemProps) => {
+  const contentItem = ({ item, isBanner, isControl }: contentItemProps) => {
     if (item && item.includes("mp4")) {
       return (
         <video
@@ -40,7 +41,7 @@ const WorkDetail = () => {
           autoPlay
           color=""
           src={item}
-          controls
+          controls={isControl}
         />
       );
     } else {
@@ -64,7 +65,11 @@ const WorkDetail = () => {
       <div className="h-screen max-sm:h-auto max-sm:min-h-max w-full text-white flex flex-col">
         <div className="flex-1 relative">
           <div className="absolute max-sm:relative w-full h-full overflow-hidden top-0 left-0 pt-[70px] max-sm:pt-10 pb-[20px]">
-            {contentItem({ item: dataDetail?.["video"], isBanner: true })}
+            {contentItem({
+              item: dataDetail?.["video"],
+              isBanner: true,
+              isControl: true,
+            })}
           </div>
         </div>
         <div className="pb-[50px] max-sm:pb-[10px] pl-5">
@@ -79,6 +84,14 @@ const WorkDetail = () => {
       <div className="flex max-sm:flex-col gap-[50px] max-sm:gap-0 w-full pl-5 max-sm:pl-0">
         <div className="w-[30%] max-sm:w-full relative max-sm:px-5 max-sm:pb-5">
           <div className="sticky top-[100px]">
+            {/* <div className="pb-[50px] max-sm:pb-[10px]">
+              <p
+                style={{ lineHeight: 0.8, fontFamily: "BebasNeue" }}
+                className="uppercase text-[80px] whitespace-pre-line max-sm:text-[30px]"
+              >
+                {dataDetail?.["title"]}
+              </p>
+            </div> */}
             <p
               style={{ lineHeight: 1, fontFamily: "BebasNeue" }}
               className="text-[30px] max-sm:text-[20px] pb-5 max-sm:pb-[10px] flex gap-2 items-center"
@@ -104,18 +117,26 @@ const WorkDetail = () => {
                 {dataDetail?.["desc"]}
               </p>
             )}
-            <p className="text-[13px] max-sm:text-[11px]">
-              Client: {dataDetail?.["client"]}
-            </p>
-            <p className="text-[13px] max-sm:text-[11px]">
-              Brand: {dataDetail?.["brand"]}
-            </p>
-            <p className="text-[13px] max-sm:text-[11px]">
-              Agency: {dataDetail?.["agency"]}
-            </p>
-            <p className="text-[13px] max-sm:text-[11px]">
-              Production House: {dataDetail?.["productionHouse"]}
-            </p>
+            {dataDetail?.["client"] && (
+              <p className="text-[13px] max-sm:text-[11px]">
+                Client: {dataDetail?.["client"]}
+              </p>
+            )}
+            {dataDetail?.["brand"] && (
+              <p className="text-[13px] max-sm:text-[11px]">
+                Brand: {dataDetail?.["brand"]}
+              </p>
+            )}
+            {dataDetail?.["agency"] && (
+              <p className="text-[13px] max-sm:text-[11px]">
+                Agency: {dataDetail?.["agency"]}
+              </p>
+            )}
+            {dataDetail?.["productionHouse"] && (
+              <p className="text-[13px] max-sm:text-[11px]">
+                Production House: {dataDetail?.["productionHouse"]}
+              </p>
+            )}
           </div>
         </div>
         <div className="flex-1 flex flex-col gap-5 max-sm:gap-1 max-sm:px-[10px]">
@@ -147,7 +168,11 @@ const WorkDetail = () => {
         </div>
       </div>
       <div className="w-full py-5 pl-5 max-sm:py-1 max-sm:px-[10px]">
-        {contentItem({ item: dataDetail?.["img4"], isBanner: false })}
+        {contentItem({
+          item: dataDetail?.["img4"],
+          isBanner: false,
+          isControl: false,
+        })}
       </div>
       <div className="flex max-sm:flex-col gap-[50px] w-full pl-5 max-sm:pl-0 max-sm:gap-0">
         <div className="w-[30%] max-sm:w-full"></div>
@@ -164,7 +189,11 @@ const WorkDetail = () => {
             )}
           </div>
           <div>
-            {contentItem({ item: dataDetail?.["img6"], isBanner: false })}
+            {contentItem({
+              item: dataDetail?.["img6"],
+              isBanner: false,
+              isControl: false,
+            })}
           </div>
         </div>
       </div>

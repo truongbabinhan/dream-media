@@ -35,38 +35,78 @@ export const Footer = () => {
           className="text-[15px] mb-[30px] max-sm:text-[10px] max-sm:mb-[10px]"
         />
         <div className="flex gap-[17px] h-[32px] max-sm:hidden">
-          <Image
-            src="/icon-logo/vimeo.png"
-            alt="vimeo"
-            width={32}
-            height={32}
-            priority
-            className="cursor-pointer"
-          />
-          <Image
-            src="/icon-logo/facebook.png"
-            alt="facebook"
-            width={32}
-            height={32}
-            priority
-            className="cursor-pointer"
-          />
-          <Image
-            src="/icon-logo/youtube.png"
-            alt="youtube"
-            width={50}
-            height={32}
-            priority
-            className="cursor-pointer"
-          />
-          <Image
-            src="/icon-logo/tiktok.png"
-            alt="tiktok"
-            width={29}
-            height={32}
-            priority
-            className="cursor-pointer"
-          />
+          <div className="relative group transition-all">
+            <Image
+              src="/icon-logo/vimeo.png"
+              alt="vimeo"
+              width={32}
+              height={32}
+              priority
+              className="cursor-pointer absolute top-0 z-10 left-0 group-hover:opacity-0"
+            />
+            <Image
+              src="/icon-logo/vimeo-color.png"
+              alt="vimeo"
+              width={32}
+              height={33}
+              priority
+              className="cursor-pointer relative bottom-[3px]"
+            />
+          </div>
+          <div className="relative group transition-all">
+            <Image
+              src="/icon-logo/facebook.png"
+              alt="facebook"
+              width={32}
+              height={32}
+              priority
+              className="cursor-pointer absolute top-0 z-10 left-0 group-hover:opacity-0"
+            />
+            <Image
+              src="/icon-logo/facebook-color.png"
+              alt="facebook"
+              width={32}
+              height={32}
+              priority
+              className="cursor-pointer relative"
+            />
+          </div>
+          <div className="relative group transition-all">
+            <Image
+              src="/icon-logo/youtube.png"
+              alt="youtube"
+              width={50}
+              height={32}
+              priority
+              className="cursor-pointer absolute top-0 z-10 left-0 group-hover:opacity-0"
+            />
+            <Image
+              src="/icon-logo/youtube-color.png"
+              alt="youtube"
+              width={50}
+              height={32}
+              priority
+              className="cursor-pointer relative"
+            />
+          </div>
+          <div className="relative group transition-all">
+            <Image
+              src="/icon-logo/tiktok.png"
+              alt="tiktok"
+              width={29}
+              height={32}
+              priority
+              className="cursor-pointer absolute top-0 z-10 left-0 group-hover:opacity-0"
+            />
+            <Image
+              src="/icon-logo/tiktok-color.png"
+              alt="tiktok"
+              width={29}
+              height={32}
+              priority
+              className="cursor-pointer relative"
+            />
+          </div>
         </div>
         <div className="gap-[5px] h-[15px] hidden max-sm:flex">
           <Image

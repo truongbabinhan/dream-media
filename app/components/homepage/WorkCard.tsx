@@ -97,7 +97,7 @@ export const WorkCard = ({ item }: WorkCardProps) => {
           />
         </div>
       </div>
-      <div className="z-[2] p-5 uppercase sticky top-[70px] max-sm:p-[10px] max-sm:top-[0px] max-sm:absolute">
+      <div className="z-[2] p-5 uppercase max-sm:p-[10px] absolute">
         <p
           style={{ lineHeight: 0.8, fontFamily: "BebasNeue" }}
           className="text-[100px] font-bold mb-1 ml-[-2px] max-sm:text-[30px]"
