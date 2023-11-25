@@ -141,7 +141,11 @@ const WorkDetail = () => {
         </div>
         <div className="flex-1 flex flex-col gap-5 max-sm:gap-1 max-sm:px-[10px]">
           <div>
-            {contentItem({ item: dataDetail?.["img1"], isBanner: false })}
+            {contentItem({
+              item: dataDetail?.["img1"],
+              isBanner: false,
+              isControl: false,
+            })}
           </div>
           <div>
             {dataDetail?.["img2"] && (
