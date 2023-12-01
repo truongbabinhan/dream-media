@@ -11,7 +11,7 @@ interface ProduceActiveProps {
 }
 export const ProduceActive = ({ data }: ProduceActiveProps) => {
   return (
-    <div className="">
+    <div className="relative">
       <div className="rounded-[70px] overflow-hidden relative">
         <Swiper
           spaceBetween={20}
@@ -25,7 +25,7 @@ export const ProduceActive = ({ data }: ProduceActiveProps) => {
           onSwiper={(swiper) => console.log(swiper)}
           modules={[Autoplay]}
         >
-          {data.img.map(
+          {data?.img.map(
             (item: string | StaticImport, index: Key | null | undefined) => {
               return (
                 <SwiperSlide key={index}>
@@ -44,8 +44,8 @@ export const ProduceActive = ({ data }: ProduceActiveProps) => {
         </Swiper>
       </div>
       <TextScramble
-        text={data.desc}
-        className="text-[16px] pt-[20px] pl-[20px] pr-[190px] max-sm:text-[10px] max-sm:bottom-[-70px] max-sm:left-0 max-sm:pr-[20px] max-sm:ml-[20px] max-sm:max-w-full"
+        text={data?.desc}
+        className="text-[14px] pt-[20px] pl-[20px] pr-[80px] max-sm:text-[10px] max-sm:bottom-[-70px] max-sm:left-0 max-sm:pr-[20px] max-sm:ml-[20px] max-sm:max-w-full absolute bottom-0 translate-y-[100%]"
         styles={{ fontFamily: "Livemono" }}
       />
     </div>

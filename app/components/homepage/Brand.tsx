@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
 import { TextScramble } from "..";
-import "./style.css";
 
 export const Brand = () => {
   const [hoverPosition, setHoverPosition] = useState({ x: 0, y: 0 });

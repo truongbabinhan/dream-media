@@ -26,7 +26,7 @@ export const Footer = () => {
       />
       <TextScramble
         text="202/16 Ngo Tat To Street, 22 Ward, Binh Thanh District, HCMC -
-        hoang@dreammedia.vn - Phone: +84907680212"
+        hello@dreammedia.vn - Phone: +84907680212"
         className="text-[11px] text-center mb-[30px]"
       />
       <div className="text-center mb-[70px] max-sm:mb-[20px]">
