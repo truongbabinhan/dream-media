@@ -83,7 +83,7 @@ export const Work = () => {
       ],
     },
     {
-      name: "LUNG CANCER",
+      name: "THƯƠNG PHỔI",
       title: "CSR PROJECT",
       client: "astrazeneca",
       brand: "",

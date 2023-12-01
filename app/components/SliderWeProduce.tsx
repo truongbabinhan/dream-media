@@ -32,7 +32,7 @@ const data = [
   {
     id: 3,
     title: "PHOTOGRAPHY",
-    desc: "",
+    desc: "Our visual experts in photography can help your brand, vision, and message through visually attracting your audience. a beautifully taken photograph is worth a million words, and with our professional photographers and visual experts we will capture your message to the world through photography. we work with the best photographers in ho chi minh city and throughout a wide variety of industries such as advertising, beauty, fashion, corporate as well as product",
     img: [
       "/we-produce/menu3/img1.png",
       "/we-produce/menu3/img2.png",
@@ -62,7 +62,7 @@ const data = [
   {
     id: 5,
     title: "POST-PRODUCTION",
-    desc: "",
+    desc: "In post-production the right mood, colors and emotions are set, music and sound effects are polished and the final video really starts to shine. you need a highly skilled editor for post post-production as this part really requires a deep understanding of all facets of this important process. post-production in dream media can make or break any video.",
     img: [
       "/we-produce/menu5/img1.png",
       "/we-produce/menu5/img2.png",
@@ -79,7 +79,7 @@ const data = [
   {
     id: 6,
     title: "LIVE STREAM",
-    desc: "",
+    desc: "We provide different live streaming packages for a variety of needs. be it a corporate event, sport events or entertainment related. we also can live stream key notes or important speeches. we’ll make sure everything looks pristine, soy you can impress your viewers with a professional look.",
     img: [
       "/we-produce/menu6/img1.png",
       "/we-produce/menu6/img2.png",
@@ -95,7 +95,7 @@ const data = [
   {
     id: 7,
     title: "SHORT FILMS",
-    desc: "",
+    desc: "We're passionate about storytelling and believe in the power of short films to convey impactful narratives.",
     img: [
       "/we-produce/menu7/img1.png",
       "/we-produce/menu7/img2.png",
@@ -113,8 +113,8 @@ const data = [
 export const SliderWeProduce = () => {
   const [activeProduce, setActiveProduce] = useState(1);
 
-  const renderProduce = () => {
-    switch (activeProduce) {
+  const renderProduce = (active: number) => {
+    switch (active) {
       case 1:
         return <ProduceActive data={data[0]} />;
       case 2:
@@ -133,8 +133,9 @@ export const SliderWeProduce = () => {
         return null;
     }
   };
+
   return (
-    <div className="flex max-xl:flex-col-reverse justify-center gap-[120px] items-center max-w-[1450px] max-xl:items-start w-full pl-[20px] pr-[80px] max-xl:pl-[10px] max-xl:pr-[10px] max-xl:gap-[30px]">
+    <div className="flex max-xl:flex-col-reverse justify-center gap-[120px] items-start max-w-[1450px] max-xl:items-start w-full pl-[20px] pr-[80px] max-xl:pl-[10px] max-xl:pr-[10px] max-xl:gap-[30px]">
       <div className="flex flex-col gap-2 max-sm:pl-[20px] min-w-[370px]">
         {data.map((item, index) => {
           return (
@@ -157,8 +158,8 @@ export const SliderWeProduce = () => {
           );
         })}
       </div>
-      <div className="flex-1 overflow-hidden relative max-w-[856px] max-sm:w-full max-sm:px-[20px]">
-        {renderProduce()}
+      <div className="flex-1 mt-5 relative max-w-[856px] max-sm:w-full max-sm:px-[20px]">
+        {renderProduce(activeProduce)}
       </div>
     </div>
   );

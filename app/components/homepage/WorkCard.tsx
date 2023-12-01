@@ -97,9 +97,9 @@ export const WorkCard = ({ item }: WorkCardProps) => {
           />
         </div>
       </div>
-      <div className="z-[2] p-5 uppercase max-sm:p-[10px] absolute">
+      <div className="z-[2] p-5 flex flex-col items-end uppercase max-sm:p-[10px] absolute right-0 text-right">
         <p
-          style={{ lineHeight: 0.8, fontFamily: "BebasNeue" }}
+          style={{ lineHeight: 1.1, fontFamily: "Bebas" }}
           className="text-[100px] font-bold mb-1 ml-[-2px] max-sm:text-[30px]"
         >
           {item.name}
@@ -116,7 +116,7 @@ export const WorkCard = ({ item }: WorkCardProps) => {
           width={57}
           height={75}
           priority
-          className="max-sm:hidden"
+          className="max-sm:hidden ml-auto"
         />
         <div className="max-w-[410px] mt-2 max-sm:hidden">
           <ul className={item.desc.length > 8 ? "columns-2" : "columns-1"}>
