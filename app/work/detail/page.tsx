@@ -5,6 +5,7 @@ import { Footer, Header } from "../../components";
 import { ModalListBts } from "../../components/work";
 import Image from "next/image";
 import Link from "next/link";
+import { useInView } from "react-intersection-observer";
 
 interface contentItemProps {
   item: any;
@@ -13,6 +14,7 @@ interface contentItemProps {
 }
 
 const WorkDetail = () => {
+  const { ref, inView } = useInView();
   const [openListBts, setOpenListBts] = useState(false);
   const [isChill, setIsChill] = useState(true);
   const [initPic, setInitPic] = useState<any | null>(0);
@@ -72,7 +74,7 @@ const WorkDetail = () => {
             })}
           </div>
         </div>
-        <div className="pb-[50px] max-sm:pb-[10px] pl-5">
+        <div ref={ref} className="pb-[50px] max-sm:pb-[10px] pl-5">
           <p
             style={{ lineHeight: 0.8, fontFamily: "BebasNeue" }}
             className="uppercase text-[80px] whitespace-pre-line max-sm:text-[30px]"
@@ -84,14 +86,16 @@ const WorkDetail = () => {
       <div className="flex max-sm:flex-col gap-[50px] max-sm:gap-0 w-full pl-5 max-sm:pl-0">
         <div className="w-[30%] max-sm:w-full relative max-sm:px-5 max-sm:pb-5">
           <div className="sticky top-[100px]">
-            {/* <div className="pb-[50px] max-sm:pb-[10px]">
-              <p
-                style={{ lineHeight: 0.8, fontFamily: "BebasNeue" }}
-                className="uppercase text-[80px] whitespace-pre-line max-sm:text-[30px]"
-              >
-                {dataDetail?.["title"]}
-              </p>
-            </div> */}
+            {!inView && (
+              <div className="pb-[20px] intro-new-y">
+                <p
+                  style={{ lineHeight: 0.8, fontFamily: "BebasNeue" }}
+                  className="uppercase text-[80px] whitespace-pre-line max-sm:text-[30px]"
+                >
+                  {dataDetail?.["title"]}
+                </p>
+              </div>
+            )}
             <p
               style={{ lineHeight: 1, fontFamily: "BebasNeue" }}
               className="text-[30px] max-sm:text-[20px] pb-5 max-sm:pb-[10px] flex gap-2 items-center"
@@ -169,9 +173,34 @@ const WorkDetail = () => {
               />
             )}
           </div>
+          <div className="-ml-[calc(43%+70px)]">
+            {contentItem({
+              item: dataDetail?.["img4"],
+              isBanner: false,
+              isControl: false,
+            })}
+          </div>
+          <div>
+            {dataDetail?.["img5"] && (
+              <Image
+                src={dataDetail?.["img5"] || ""}
+                alt="work"
+                layout="fill"
+                objectFit="contain"
+                className="!relative !h-auto"
+              />
+            )}
+          </div>
+          <div>
+            {contentItem({
+              item: dataDetail?.["img6"],
+              isBanner: false,
+              isControl: false,
+            })}
+          </div>
         </div>
       </div>
-      <div className="w-full py-5 pl-5 max-sm:py-1 max-sm:px-[10px]">
+      {/* <div className="w-full py-5 pl-5 max-sm:py-1 max-sm:px-[10px]">
         {contentItem({
           item: dataDetail?.["img4"],
           isBanner: false,
@@ -200,7 +229,7 @@ const WorkDetail = () => {
             })}
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="flex flex-wrap pt-5 max-sm:pt-1 max-sm:px-[10px]">
         {listImg &&
           listImg.map((item: string, index: Key | null | undefined) => {
