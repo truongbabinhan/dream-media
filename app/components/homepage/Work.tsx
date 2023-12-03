@@ -10,7 +10,7 @@ export const Work = () => {
       agency: "Fortune Media",
       productionHouse: "dream media",
       background: "/work/lipovitan.png",
-      video: "/video/lipovitan.mp4",
+      video: "/video-intro/lipovitan.mp4",
       link: "lipovitan",
       desc: [
         "STORYBOARD DEVELOPMENT",
@@ -36,7 +36,7 @@ export const Work = () => {
       agency: "t&a ogivy",
       productionHouse: "dream media",
       background: "/work/fanta.png",
-      video: "/video/fanta.mp4",
+      video: "/video-intro/fanta.mp4",
       link: "fanta",
       desc: [
         "STORYBOARD DEVELOPMENT",
@@ -62,7 +62,7 @@ export const Work = () => {
       agency: "t&a ogivy",
       productionHouse: "dream media",
       background: "/work/surf.png",
-      video: "/video/surf.mp4",
+      video: "/video-intro/surf.mp4",
       link: "surf",
       desc: [
         "STORYBOARD DEVELOPMENT",
@@ -90,7 +90,7 @@ export const Work = () => {
       agency: "TBWA",
       productionHouse: "dream media",
       background: "/work/cancer.png",
-      video: "/video/lung-cancer.mp4",
+      video: "/video-intro/lung-cancer.mp4",
       link: "lung-cancer",
       desc: [
         "STORYBOARD DEVELOPMENT",
@@ -114,7 +114,7 @@ export const Work = () => {
       agency: "t&a ogivy",
       productionHouse: "dream media",
       background: "/work/fanta-newyear.png",
-      video: "/video/fanta-newyear.mp4",
+      video: "/video-intro/fanta-newyear.mp4",
       link: "fanta-newyear",
       desc: [
         "STORYBOARD DEVELOPMENT",
