@@ -21,9 +21,17 @@ export const Brand = () => {
           objectPosition="center"
           className="!relative"
         />
+        {/* <Image
+          src="/brand/brand-color.png"
+          alt="brand"
+          layout="fill"
+          objectFit="contain"
+          objectPosition="center"
+          className="!relative hidden max-sm:block"
+        /> */}
 
         <div
-          className="absolute top-0 left-0 w-full h-full z-10 overflow-hidden"
+          className="max-sm:hidden absolute top-0 left-0 w-full h-full z-10 overflow-hidden"
           onMouseMove={(e) =>
             setHoverPosition({
               x: e.nativeEvent.offsetX,

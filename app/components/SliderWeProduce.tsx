@@ -1,5 +1,6 @@
 import { ProduceActive } from "./homepage";
 import { useState } from "react";
+import { ProduceActive2 } from "./homepage/productActive/ProductActive2";
 const data = [
   {
     id: 1,
@@ -118,15 +119,15 @@ export const SliderWeProduce = () => {
       case 1:
         return <ProduceActive data={data[0]} />;
       case 2:
-        return <ProduceActive data={data[1]} />;
+        return <ProduceActive2 data={data[1]} />;
       case 3:
         return <ProduceActive data={data[2]} />;
       case 4:
-        return <ProduceActive data={data[3]} />;
+        return <ProduceActive2 data={data[3]} />;
       case 5:
         return <ProduceActive data={data[4]} />;
       case 6:
-        return <ProduceActive data={data[5]} />;
+        return <ProduceActive2 data={data[5]} />;
       case 7:
         return <ProduceActive data={data[6]} />;
       default:
@@ -158,7 +159,7 @@ export const SliderWeProduce = () => {
           );
         })}
       </div>
-      <div className="flex-1 mt-5 relative max-w-[856px] max-sm:w-full max-sm:px-[20px]">
+      <div className="flex-1 mt-5 relative max-w-[856px] max-sm:w-full max-sm:px-[20px] max-sm:min-h-[230px]">
         {renderProduce(activeProduce)}
       </div>
     </div>

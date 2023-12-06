@@ -1,8 +1,13 @@
 import Image from "next/image";
 import { TextScramble } from "..";
 import { Key, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade } from "swiper/modules";
 import { useRouter } from "next/navigation";
 import { useInView } from "react-intersection-observer";
+import "swiper/css";
+import "swiper/css/effect-fade";
+
 interface WorkCardProps {
   item: any;
 }
@@ -46,9 +51,74 @@ export const WorkCard = ({ item }: WorkCardProps) => {
   const goToWorkDetail = (id: any) => {
     return router.push(`/work/detail?brand=${id}`, { scroll: true });
   };
+
+  const renderImage = (data: any) => {
+    if (Array.isArray(data.background)) {
+      return (
+        <div className="w-full h-full">
+          <Swiper
+            spaceBetween={20}
+            effect={"fade"}
+            slidesPerView={1}
+            centeredSlides={true}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+            }}
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={(swiper) => console.log(swiper)}
+            modules={[Autoplay, EffectFade]}
+            className="h-full"
+          >
+            {data.background.map(
+              (item: string, index: Key | null | undefined) => {
+                return (
+                  <SwiperSlide key={index}>
+                    <div className="w-full h-full">
+                      <Image
+                        src={item}
+                        layout="fill"
+                        objectFit="cover"
+                        className="w-full h-auto !relative"
+                        alt="produce"
+                      />
+                    </div>
+                  </SwiperSlide>
+                );
+              }
+            )}
+          </Swiper>
+        </div>
+      );
+    }
+    return (
+      <>
+        <Image
+          src={data.background}
+          alt="work"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="top left"
+          priority
+          className={`transition-all duration-700 absolute top-0 left-0 z-[1] ${
+            data.video && inView && "hidden"
+          } ${inView && "!blur-0"} blur-[30px] max-sm:hidden`}
+        />
+        <Image
+          src={data.background}
+          alt="work"
+          layout="fill"
+          objectFit="cover"
+          priority
+          className="w-full h-auto !relative hidden max-sm:block"
+        />
+      </>
+    );
+  };
+
   return (
     <div
-      className="min-h-screen max-sm:min-h-max w-full text-white relative group cursor-pointer"
+      className="min-h-screen max-sm:min-h-[200px] w-full text-white relative group cursor-pointer"
       onClick={() => goToWorkDetail(item.link)}
     >
       <div
@@ -76,25 +146,7 @@ export const WorkCard = ({ item }: WorkCardProps) => {
               src={item.video}
             />
           )}
-          <Image
-            src={item.background}
-            alt="work"
-            layout="fill"
-            objectFit="cover"
-            objectPosition="top left"
-            priority
-            className={`transition-all duration-700 absolute top-0 left-0 z-[1] ${
-              item.video && inView && "hidden"
-            } ${inView && "!blur-0"} blur-[30px] max-sm:hidden`}
-          />
-          <Image
-            src={item.background}
-            alt="work"
-            layout="fill"
-            objectFit="cover"
-            priority
-            className="w-full h-auto !relative hidden max-sm:block"
-          />
+          {renderImage(item)}
         </div>
       </div>
       <div className="z-[2] p-5 flex flex-col items-end uppercase max-sm:p-[10px] absolute right-0 text-right">

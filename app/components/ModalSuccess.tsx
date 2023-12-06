@@ -14,7 +14,7 @@ export const ModalSuccess = ({ open, setOpen }: ModalProps) => {
     <Popup open={open} closeOnDocumentClick onClose={closeModal}>
       <div
         style={{ fontFamily: "Livemono" }}
-        className="w-[535px] max-sm:w-[320px] backdrop-blur-[30px] bg-[linear-gradient(142deg,rgba(180,180,180,0.60)_4.12%,rgba(217,217,217,0.10)_96.41%)] rounded-[20px] text-white overflow-hidden text-[15px] transition-all ease-in-out delay-150 flex flex-col justify-center items-center pt-[50px] pb-[30px]"
+        className="intro-new-y w-[535px] max-sm:w-[320px] backdrop-blur-[30px] bg-[linear-gradient(142deg,rgba(180,180,180,0.60)_4.12%,rgba(217,217,217,0.10)_96.41%)] rounded-[20px] text-white overflow-hidden text-[15px] transition-all ease-in-out delay-150 flex flex-col justify-center items-center pt-[50px] pb-[30px]"
       >
         <BsCheckCircle color="#00FF90" size={66} />
         <p className="text-[30px] text-center max-sm:text-[16px] pt-[60px] pb-[10px] max-sm:pt-[30px]">

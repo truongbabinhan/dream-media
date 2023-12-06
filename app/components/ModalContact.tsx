@@ -140,7 +140,7 @@ export const ModalContact = ({ open, setOpen, setShowSuccess }: ModalProps) => {
     <Popup open={open} closeOnDocumentClick onClose={closeModal}>
       <div
         style={{ fontFamily: "Livemono" }}
-        className="w-[950px] max-lg:w-[calc(100%-40px)] max-lg:mx-auto backdrop-blur-[30px] bg-[linear-gradient(142deg,rgba(180,180,180,0.60)_4.12%,rgba(217,217,217,0.10)_96.41%)] rounded-[20px] overflow-hidden text-[15px] transition-all ease-in-out delay-150"
+        className="intro-new-y w-[950px] max-lg:w-[calc(100%-40px)] max-lg:mx-auto backdrop-blur-[30px] bg-[linear-gradient(142deg,rgba(180,180,180,0.60)_4.12%,rgba(217,217,217,0.10)_96.41%)] rounded-[20px] overflow-hidden text-[15px] transition-all ease-in-out delay-150"
       >
         <div className="h-10">
           <a
