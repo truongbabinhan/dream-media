@@ -208,13 +208,16 @@
     "brand": "Bia Sai Gon Chill",
     "agency": "T&A Ogilvy",
     "productionHouse": "Dream Media",
-    "video": "/work/saigon-chill.png",
-    "img1": "/work-detail/saigon-chill/1.mp4",
+    "video": "/work/saigon-chill/3.png",
+    "img1": [
+      "/work-detail/saigon-chill/gif1.mp4",
+      "/work-detail/saigon-chill/gif2.mp4"
+    ],
     "img2": "/work-detail/saigon-chill/2.png",
     "img3": "/work-detail/saigon-chill/3.png",
-    "img4": "/work-detail/saigon-chill/6.png",
+    "img4": "/work-detail/saigon-chill/4.png",
     "img5": "/work-detail/saigon-chill/5.png",
-    "img6": "/work-detail/saigon-chill/4.mp4",
+    "img6": "/work-detail/saigon-chill/6.png",
     "list": [
       "/work-detail/saigon-chill/list/1.png",
       "/work-detail/saigon-chill/list/2.png",

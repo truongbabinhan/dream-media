@@ -83,7 +83,7 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
         [ {isShowMenu ? "CLOSE" : "MENU"} ]
       </p>
       <p className="fixed text-[15px] right-5 top-5 z-10 max-sm:hidden max-sm:text-[12px]">
-        SCROLL ({percentScroll.toFixed()}%)
+        SCROLL ({percentScroll.toFixed() || 0}%)
       </p>
       <p className="fixed text-[15px] left-5 bottom-5 z-10 max-sm:hidden">
         HCMC ({dateNowVN}) NEW YORK ({dateNowNY})
@@ -93,7 +93,7 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
       </p>
       <p
         onClick={() => setIsChill(!isChill)}
-        className="fixed flex items-center text-[15px] z-10 cursor-pointer right-5 bottom-5 select-none max-sm:text-[12px] max-sm:right-[10px] max-sm:bottom-[10px]"
+        className="max-sm:hidden fixed flex items-center text-[15px] z-10 cursor-pointer right-5 bottom-5 select-none max-sm:text-[12px] max-sm:right-[10px] max-sm:bottom-[10px]"
       >
         CHILL: {isChill ? "OFF" : "ON"}
         <span className="pl-2 pb-[2px]">

@@ -33,6 +33,28 @@ const WorkDetail = () => {
   }, []);
 
   const contentItem = ({ item, isBanner, isControl }: contentItemProps) => {
+    if (Array.isArray(item)) {
+      return (
+        <div className="flex gap-5 max-sm:gap-2">
+          {item.map((video: string, index: Key) => {
+            return (
+              <div key={index} className="flex-1">
+                <video
+                  typeof="video/mp4"
+                  className="h-auto max-w-full max-h-full mx-auto"
+                  preload="auto"
+                  muted={isChill}
+                  autoPlay
+                  color=""
+                  src={video}
+                  controls={isControl}
+                />
+              </div>
+            );
+          })}
+        </div>
+      );
+    }
     if (item && item.includes("mp4")) {
       return (
         <video
@@ -143,7 +165,7 @@ const WorkDetail = () => {
             )}
           </div>
         </div>
-        <div className="flex-1 flex flex-col gap-5 max-sm:gap-1 max-sm:px-[10px]">
+        <div className="flex-1 flex flex-col gap-5 max-sm:gap-2 max-sm:px-[10px]">
           <div>
             {contentItem({
               item: dataDetail?.["img1"],
@@ -173,7 +195,7 @@ const WorkDetail = () => {
               />
             )}
           </div>
-          <div className="-ml-[calc(43%+70px)]">
+          <div className="-ml-[calc(43%+70px)] max-sm:ml-0">
             {contentItem({
               item: dataDetail?.["img4"],
               isBanner: false,
