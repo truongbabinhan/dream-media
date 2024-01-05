@@ -21,7 +21,7 @@ export const ModalShowReel = ({ open, setOpen }: ModalProps) => {
           className="w-full h-full max-w-full max-h-full"
           preload="auto"
           autoPlay
-          src="/showreel.mp4"
+          src="/showreel-new.mp4"
           controls
         />
       </div>
