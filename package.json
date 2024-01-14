@@ -31,6 +31,7 @@
     "react-intersection-observer": "^9.5.2",
     "react-lottie": "^1.2.3",
     "react-moving-text": "^0.0.7",
+    "react-player": "^2.14.1",
     "react-shuffle-text": "^1.0.6",
     "react-spring": "^9.7.3",
     "reactjs-popup": "^2.0.6",
