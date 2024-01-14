@@ -6,6 +6,7 @@ import { ModalListBts } from "../../components/work";
 import Image from "next/image";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
+import ReactPlayer from "react-player";
 
 interface contentItemProps {
   item: any;
@@ -33,6 +34,18 @@ const WorkDetail = () => {
   }, []);
 
   const contentItem = ({ item, isBanner, isControl }: contentItemProps) => {
+    if (item && item.includes("vimeo")) {
+      return (
+        <div className="flex-1 w-full h-full">
+          <ReactPlayer
+            url={item}
+            playing={true}
+            controls={true}
+            className="!w-full !h-full"
+          />
+        </div>
+      );
+    }
     if (Array.isArray(item)) {
       return (
         <div className="flex gap-5 max-sm:gap-2">
@@ -47,6 +60,7 @@ const WorkDetail = () => {
                   autoPlay
                   color=""
                   src={video}
+                  loop
                   controls={isControl}
                 />
               </div>
@@ -65,6 +79,7 @@ const WorkDetail = () => {
           autoPlay
           color=""
           src={item}
+          loop
           controls={isControl}
         />
       );
