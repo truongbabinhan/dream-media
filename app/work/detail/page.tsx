@@ -293,7 +293,7 @@ const WorkDetail = () => {
           })}
       </div>
       <div className="py-[80px] max-sm:py-10">
-        <Link href="/">
+        <Link href="/work">
           <p className="text-[20px] max-sm:text-[12px]">[BACK TO WORK]</p>
         </Link>
       </div>

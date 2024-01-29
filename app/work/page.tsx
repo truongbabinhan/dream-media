@@ -87,6 +87,54 @@ const Work = () => {
       </div>
       <div className="bg-homepage-dashboard bg-top bg-contain bg-no-repeat relative py-[100px] max-sm:py-[40px] w-full">
         <div className="w-full h-full backdrop-brightness-[0.1] absolute left-0 top-0 z-[1]"></div>
+        <Image
+          src="/homepage/left.gif"
+          alt="star"
+          width={480}
+          height={273}
+          priority
+          className="absolute left-0 top-0 z-[2] max-sm:hidden"
+        />
+        <Image
+          src="/homepage/left.gif"
+          alt="star"
+          width={120}
+          height={68}
+          priority
+          className="absolute left-0 top-[0px] z-[2] hidden max-sm:block"
+        />
+        <Image
+          src="/homepage/right.gif"
+          alt="star"
+          width={425}
+          height={240}
+          priority
+          className="absolute right-0 top-0 z-[2] max-sm:hidden"
+        />
+        <Image
+          src="/homepage/right.gif"
+          alt="star"
+          width={120}
+          height={68}
+          priority
+          className="absolute right-0 top-[0px] z-[2] hidden max-sm:block"
+        />
+        <Image
+          src="/homepage/middle.gif"
+          alt="star"
+          width={195}
+          height={110}
+          priority
+          className="absolute right-1/2 translate-x-[calc(50%)] top-[180px] z-[2] max-sm:hidden"
+        />
+        <Image
+          src="/homepage/middle.gif"
+          alt="star"
+          width={60}
+          height={35}
+          priority
+          className="absolute right-1/2 top-[80px] translate-x-[calc(50%)] z-[2] hidden max-sm:block"
+        />
         <div className="relative z-[2]">
           <p
             className="text-[90px] text-center whitespace-nowrap text-black max-sm:text-[25px]"
@@ -99,7 +147,7 @@ const Work = () => {
           >
             WE PRODUCE
           </p>
-          <div className="flex gap-[55px] max-sm:gap-[30px] justify-center items-center flex-wrap max-w-[1000px] mx-auto mt-[80px] max-sm:mt-[40px]">
+          <div className="flex gap-[55px] max-sm:gap-[30px] justify-center items-center flex-wrap max-w-[1000px] mx-auto mt-[100px] max-sm:mt-[60px]">
             {categoryWork.map((item) => {
               return (
                 <div
