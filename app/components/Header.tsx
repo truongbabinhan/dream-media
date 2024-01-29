@@ -7,11 +7,12 @@ import { ModalSuccess } from ".";
 import { GoUnmute, GoMute } from "react-icons/go";
 
 interface HeaderProps {
-  setIsChill: any;
-  isChill: boolean;
+  setIsChill?: any;
+  isChill?: boolean;
 }
 export const Header = ({ setIsChill, isChill }: HeaderProps) => {
   const router = useRouter();
+
   const [percentScroll, setPercentScroll] = useState(0);
   const [isShowMenu, setIsShowMenu] = useState(false);
   const [dateNowVN, setDateNowVN] = useState("");
@@ -29,7 +30,10 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
     },
     {
       name: "work",
-      isUpdate: true,
+      isUpdate: false,
+      action: () => {
+        router.push("/work", { scroll: true });
+      },
     },
     {
       name: "about",
@@ -91,15 +95,18 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
       <p className="fixed text-[12px] left-[10px] bottom-[10px] z-10 hidden max-sm:block">
         HCMC ({dateNowVN})
       </p>
-      <p
-        onClick={() => setIsChill(!isChill)}
-        className="max-sm:hidden fixed flex items-center text-[15px] z-10 cursor-pointer right-5 bottom-5 select-none max-sm:text-[12px] max-sm:right-[10px] max-sm:bottom-[10px]"
-      >
-        CHILL: {isChill ? "OFF" : "ON"}
-        <span className="pl-2 pb-[2px]">
-          {isChill ? <GoMute size={18} /> : <GoUnmute size={18} />}
-        </span>
-      </p>
+      {setIsChill && (
+        <p
+          onClick={() => setIsChill(!isChill)}
+          className="max-sm:hidden fixed flex items-center text-[15px] z-10 cursor-pointer right-5 bottom-5 select-none max-sm:text-[12px] max-sm:right-[10px] max-sm:bottom-[10px]"
+        >
+          CHILL: {isChill ? "OFF" : "ON"}
+          <span className="pl-2 pb-[2px]">
+            {isChill ? <GoMute size={18} /> : <GoUnmute size={18} />}
+          </span>
+        </p>
+      )}
+
       <div
         className={`fixed z-20 top-[80px] left-[100px] bg-[linear-gradient(105deg,_color(display-p3_0.851_0.851_0.851_/_0.40)_15.93%,_color(display-p3_0.851_0.851_0.851_/_0.10)_94.84%)] backdrop-blur-lg max-sm:bg-black/90 min-w-screen transition-all overflow-hidden ${
           isShowMenu
