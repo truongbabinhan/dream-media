@@ -33,15 +33,22 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
       isUpdate: false,
       action: () => {
         router.push("/work", { scroll: true });
+        setIsShowMenu(false);
       },
     },
     {
       name: "about",
       isUpdate: true,
+      action: () => {
+        setIsShowMenu(false);
+      },
     },
     {
       name: "studio life",
       isUpdate: true,
+      action: () => {
+        setIsShowMenu(false);
+      },
     },
   ];
   useEffect(() => {
