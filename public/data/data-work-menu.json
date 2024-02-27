@@ -4,259 +4,365 @@
       "img": "/work/detail/1.png",
       "title": "BIA SAIGON GOLD",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "photography"]
     },
     {
       "img": "/work/detail/2.png",
       "title": "BIA SAIGON CHILL",
-      "path": "saigon-chill",
-      "type": "horizontal"
+      "path": "",
+      "type": "horizontal",
+      "group": ["all", "tvc", "post-production", "photography"]
     },
     {
       "img": "/work/detail/3.png",
       "title": "thương phổi shortfilm",
       "path": "lung-cancer",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "short-film"]
     },
     {
       "img": "/work/detail/4.png",
       "title": "SURF RAINY SEASON",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "tvc", "post-production"]
     },
     {
       "img": "/work/detail/5.png",
       "title": "FANTA COLORFUL",
       "path": "fanta",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "tvc", "post-production"]
     },
     {
       "img": "/work/detail/6.png",
       "title": "SURF SUNNY SEASON",
       "path": "surf",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "tvc", "post-production"]
     },
     {
       "img": "/work/detail/7.png",
       "title": "LIPOVITAN",
       "path": "lipovitan",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "tvc", "post-production"]
     },
     {
       "img": "/work/detail/8.png",
-      "title": "COKE MEAL",
+      "title": "VSMART STAR 3",
       "path": "",
-      "type": "vertical"
+      "type": "horizontal",
+      "group": ["all", "tvc", "post-production"]
     },
     {
       "img": "/work/detail/9.png",
       "title": "fanta tết",
       "path": "fanta-newyear",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "tvc", "post-production"]
     },
     {
       "img": "/work/detail/10.png",
-      "title": "BIA SAIGON CHILL",
-      "path": "",
-      "type": "horizontal"
+      "title": "BIA SAIGON CHILL VALENTINE",
+      "path": "saigon-chill-valentine",
+      "type": "horizontal",
+      "group": ["all", "photography"]
     },
     {
       "img": "/work/detail/11.png",
-      "title": "TIKTOK MASTER 2022",
+      "title": "BIA SAIGON CHILL",
       "path": "",
-      "type": "vertical"
+      "type": "horizontal",
+      "group": ["all", "tvc"]
     },
     {
       "img": "/work/detail/12.png",
-      "title": "VSMART STAR 3",
+      "title": "COMFORT DETERGENT",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "tvc", "post-production"]
     },
     {
       "img": "/work/detail/13.png",
-      "title": "COMFORT DETERGENT",
+      "title": "photoshoot fanta colorful",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "photography"]
     },
     {
       "img": "/work/detail/14.png",
-      "title": "TIKI 12.12",
+      "title": "photoshoot surf sunny & rainy season",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "photography"]
     },
     {
       "img": "/work/detail/15.png",
-      "title": "masteri west heights tvc",
+      "title": "photoshoot bia saigon export premium",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "photography"]
     },
     {
       "img": "/work/detail/16.png",
-      "title": "fanta north",
+      "title": "photoshoot fanta tết",
       "path": "",
-      "type": "vertical"
+      "type": "horizontal",
+      "group": ["all", "photography"]
     },
     {
       "img": "/work/detail/17.png",
-      "title": "unlive film",
+      "title": "[COUNTDOWN 2023] THE CHILL FEST QUY NHON & VUNG TAU",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "live-stream"]
     },
     {
       "img": "/work/detail/18.png",
-      "title": "tiki săn sale 7.7",
+      "title": "LIVESTREAM BIA LẠC VIỆT",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "live-stream"]
     },
     {
       "img": "/work/detail/19.png",
-      "title": "tiki black friday",
+      "title": "LIVESTREAM VĨNH TƯỜNG",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "live-stream"]
     },
     {
       "img": "/work/detail/20.png",
-      "title": "dove - nature love",
+      "title": "Livestream “ĐÓN TẾT RỒNG, NHẬN LỘC VÀNG”",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "live-stream"]
     },
     {
       "img": "/work/detail/21.png",
-      "title": "tiktok clf",
+      "title": "masteri west heights tvc",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "viral-videos"]
     },
     {
       "img": "/work/detail/22.png",
-      "title": "bia saigon export",
+      "title": "COKE MEAL",
       "path": "",
-      "type": "horizontal"
+      "type": "vertical",
+      "group": ["all", "digital-content"]
     },
     {
       "img": "/work/detail/23.png",
-      "title": "fanta back to school",
+      "title": "unlive film",
       "path": "",
-      "type": "vertical"
+      "type": "horizontal",
+      "group": ["all", "short-film"]
     },
     {
       "img": "/work/detail/24.png",
-      "title": "tiktok pride 2022",
+      "title": "TIKTOK MASTER 2022",
       "path": "",
-      "type": "horizontal"
+      "type": "vertical",
+      "group": ["all", "digital-content"]
     },
     {
       "img": "/work/detail/25.png",
-      "title": "knorr viên súp series video",
+      "title": "TIKI 12.12",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "viral-videos"]
     },
     {
       "img": "/work/detail/26.png",
-      "title": "tiktok young 2022",
+      "title": "fanta north",
       "path": "",
-      "type": "vertical"
+      "type": "vertical",
+      "group": ["all", "viral-videos"]
     },
     {
       "img": "/work/detail/27.png",
-      "title": "tiki fashion",
+      "title": "tiki săn sale 7.7",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "viral-videos"]
     },
     {
       "img": "/work/detail/28.png",
-      "title": "tiki fashion",
+      "title": "tiki black friday",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "viral-videos"]
     },
     {
       "img": "/work/detail/29.png",
-      "title": "ps bumber 6s",
+      "title": "tiktok clf",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "viral-videos"]
     },
     {
       "img": "/work/detail/30.png",
-      "title": "surf motion graphic",
+      "title": "dove - nature love",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "viral-videos"]
     },
     {
       "img": "/work/detail/31.png",
-      "title": "seventh generation",
+      "title": "fanta back to school",
       "path": "",
-      "type": "horizontal"
+      "type": "vertical",
+      "group": ["all", "viral-videos"]
     },
     {
       "img": "/work/detail/32.png",
-      "title": "bia craft 29k",
+      "title": "bia saigon export",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "digital-content"]
     },
     {
       "img": "/work/detail/33.png",
-      "title": "gogi house",
+      "title": "tiktok pride 2022",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "digital-content"]
     },
     {
       "img": "/work/detail/34.png",
-      "title": "vaseline",
+      "title": "knorr viên súp series video",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "digital-content"]
     },
     {
       "img": "/work/detail/35.png",
-      "title": "tda lauching video",
+      "title": "tiki fashion",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "digital-content"]
     },
     {
       "img": "/work/detail/36.png",
-      "title": "converse",
+      "title": "tiktok young 2022",
       "path": "",
-      "type": "horizontal"
+      "type": "vertical",
+      "group": ["all", "digital-content"]
     },
     {
       "img": "/work/detail/37.png",
-      "title": "tiktok awards 2021",
+      "title": "tiki pro",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "digital-content"]
     },
     {
       "img": "/work/detail/38.png",
-      "title": "comfort top model online 2019",
+      "title": "ps bumber 6s",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "digital-content"]
     },
     {
       "img": "/work/detail/39.png",
-      "title": "t&a ogilvy content studio",
+      "title": "seventh generation",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "digital-content"]
     },
     {
       "img": "/work/detail/40.png",
-      "title": "bia craft truck",
+      "title": "surf motion graphic",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "digital-content"]
     },
     {
       "img": "/work/detail/41.png",
-      "title": "coca cola - chiến thần hứng khởi",
+      "title": "gogi house",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "digital-content"]
     },
     {
       "img": "/work/detail/42.png",
-      "title": "botanika fruit",
+      "title": "bia craft 29k",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "digital-content"]
     },
     {
       "img": "/work/detail/43.png",
+      "title": "tda lauching video",
+      "path": "",
+      "type": "horizontal",
+      "group": ["all", "digital-content"]
+    },
+    {
+      "img": "/work/detail/44.png",
+      "title": "vaseline",
+      "path": "",
+      "type": "horizontal",
+      "group": ["all", "digital-content"]
+    },
+    {
+      "img": "/work/detail/45.png",
+      "title": "tiktok awards 2021",
+      "path": "",
+      "type": "horizontal",
+      "group": ["all", "digital-content"]
+    },
+    {
+      "img": "/work/detail/46.png",
+      "title": "converse",
+      "path": "",
+      "type": "horizontal",
+      "group": ["all", "digital-content"]
+    },
+    {
+      "img": "/work/detail/47.png",
+      "title": "t&a ogilvy content studio",
+      "path": "",
+      "type": "horizontal",
+      "group": ["all", "digital-content"]
+    },
+    {
+      "img": "/work/detail/48.png",
+      "title": "comfort top model online 2019",
+      "path": "",
+      "type": "horizontal",
+      "group": ["all", "digital-content"]
+    },
+    {
+      "img": "/work/detail/49.png",
+      "title": "coca cola - chiến thần hứng khởi",
+      "path": "",
+      "type": "horizontal",
+      "group": ["all", "digital-content"]
+    },
+    {
+      "img": "/work/detail/50.png",
+      "title": "bia craft truck",
+      "path": "",
+      "type": "horizontal",
+      "group": ["all", "digital-content"]
+    },
+    {
+      "img": "/work/detail/51.png",
       "title": "milo",
       "path": "",
-      "type": "horizontal"
+      "type": "horizontal",
+      "group": ["all", "digital-content"]
+    },
+    {
+      "img": "/work/detail/52.png",
+      "title": "botanika fruit",
+      "path": "",
+      "type": "horizontal",
+      "group": ["all", "digital-content", "viral-videos"]
     }
   ]
 }
