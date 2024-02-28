@@ -54,6 +54,7 @@ const Work = () => {
   const [dataWork, setDataWork] = useState([]);
   const [updateWorkModal, setUpdateWorkModal] = useState(false);
   const [activeTab, setActiveTab] = useState("all");
+  const [dataShow, setDataShow] = useState([]);
 
   useEffect(() => {
     fetch("/data/data-work-menu.json")
@@ -62,6 +63,12 @@ const Work = () => {
         setDataWork(data?.listWork);
       });
   }, []);
+
+  useEffect(() => {
+    setDataShow(
+      dataWork.filter((item: any) => item?.group.includes(activeTab))
+    );
+  }, [activeTab, dataWork]);
 
   const goToWorkDetail = (id: any) => {
     if (id !== "") {
@@ -83,9 +90,9 @@ const Work = () => {
               objectFit="contain"
               className="!relative"
             /> */}
-            <div className="flex-1 w-full h-full bg-[url('/work/detail/banner.png')] bg-contain bg-no-repeat bg-center">
+            <div className="flex-1 w-full h-full bg-contain bg-no-repeat bg-center">
               <ReactPlayer
-                url="https://vimeo.com/840347796"
+                url="https://vimeo.com/900726752"
                 playing={true}
                 controls={true}
                 className="!w-full !h-full"
@@ -205,15 +212,15 @@ const Work = () => {
               );
             })}
           </div>
-          <div className="mt-[100px] max-sm:mt-[40px] gap-[32px] grid grid-cols-2 max-sm:grid-cols-1 max-w-[1180px] mx-[auto] max-sm:px-[30px]">
-            {dataWork?.map((item: any, index) => {
-              if (item.group.includes(activeTab)) {
+          <div className="min-h-[600px] max-sm:min-h-[500px]">
+            <div className="mt-[100px] max-sm:mt-[40px] gap-[32px] grid grid-cols-2 max-sm:grid-cols-1 max-w-[1180px] mx-[auto] max-sm:px-[30px]">
+              {dataShow?.map((item: any, index) => {
                 return (
                   <div
-                    key={index}
+                    key={`${item?.img}-${index}`}
                     className={`${
                       item?.type === "vertical" && "row-span-3"
-                    } rounded-[70px] max-sm:rounded-[30px] overflow-hidden cursor-pointer relative group intro-new-x`}
+                    } rounded-[70px] max-sm:rounded-[30px] overflow-hidden cursor-pointer relative group intro-new-fade-in`}
                   >
                     <Image
                       src={item?.img}
@@ -235,8 +242,8 @@ const Work = () => {
                     </div>
                   </div>
                 );
-              }
-            })}
+              })}
+            </div>
           </div>
         </div>
       </div>
