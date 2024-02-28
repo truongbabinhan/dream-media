@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { ModalUpdateWork } from "../components/work";
+import ReactPlayer from "react-player";
 
 const categoryWork = [
   {
@@ -75,13 +76,21 @@ const Work = () => {
       <div className="h-screen max-sm:h-auto max-sm:min-h-max w-full text-white flex flex-col">
         <div className="flex-1 relative">
           <div className="absolute max-sm:relative w-full h-full overflow-hidden top-0 left-0 pt-[70px] max-sm:pt-10 pb-[20px]">
-            <Image
+            {/* <Image
               src="/work/detail/banner.png"
               alt="item"
               layout="fill"
               objectFit="contain"
               className="!relative"
-            />
+            /> */}
+            <div className="flex-1 w-full h-full bg-[url('/work/detail/banner.png')] bg-contain bg-no-repeat bg-center">
+              <ReactPlayer
+                url="https://vimeo.com/840347796"
+                playing={true}
+                controls={true}
+                className="!w-full !h-full"
+              />
+            </div>
           </div>
         </div>
         <div className="pb-[50px] max-sm:pb-[10px] pl-5">
