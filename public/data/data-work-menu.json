@@ -3,14 +3,14 @@
     {
       "img": "/work/detail/1.png",
       "title": "BIA SAIGON GOLD",
-      "path": "",
+      "path": "saigon-gold",
       "type": "horizontal",
       "group": ["all", "photography"]
     },
     {
       "img": "/work/detail/2.png",
       "title": "BIA SAIGON CHILL",
-      "path": "",
+      "path": "saigon-chill-festive",
       "type": "horizontal",
       "group": ["all", "tvc", "post-production", "photography"]
     },
