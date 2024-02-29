@@ -71,7 +71,7 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
     <>
       <Image
         className="fixed left-5 top-[15px] z-10 max-sm:hidden cursor-pointer"
-        src="/logo.svg"
+        src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/logo.svg"
         alt="Logo"
         width={201}
         height={50}
@@ -80,7 +80,7 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
       />
       <Image
         className="fixed left-[10px] top-[10px] z-10 hidden max-sm:block cursor-pointer"
-        src="/logo-sp.svg"
+        src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/logo-sp.svg"
         alt="Logo"
         width={120}
         height={30}

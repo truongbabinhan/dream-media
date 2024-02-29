@@ -115,7 +115,7 @@ const Work = () => {
       <div className="bg-homepage-dashboard bg-top bg-contain bg-no-repeat relative py-[100px] max-sm:py-[40px] w-full">
         <div className="w-full h-full backdrop-brightness-[0.1] absolute left-0 top-0 z-[1]"></div>
         <Image
-          src="/homepage/left.gif"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/homepage/left.gif"
           alt="star"
           width={480}
           height={273}
@@ -123,7 +123,7 @@ const Work = () => {
           className="absolute left-0 top-0 z-[2] max-sm:hidden"
         />
         <Image
-          src="/homepage/left.gif"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/homepage/left.gif"
           alt="star"
           width={120}
           height={68}
@@ -131,7 +131,7 @@ const Work = () => {
           className="absolute left-0 top-[0px] z-[2] hidden max-sm:block"
         />
         <Image
-          src="/homepage/right.gif"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/homepage/right.gif"
           alt="star"
           width={425}
           height={240}
@@ -139,7 +139,7 @@ const Work = () => {
           className="absolute right-0 top-0 z-[2] max-sm:hidden"
         />
         <Image
-          src="/homepage/right.gif"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/homepage/right.gif"
           alt="star"
           width={120}
           height={68}
@@ -147,7 +147,7 @@ const Work = () => {
           className="absolute right-0 top-[0px] z-[2] hidden max-sm:block"
         />
         <Image
-          src="/homepage/middle.gif"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/homepage/middle.gif"
           alt="star"
           width={195}
           height={110}
@@ -155,7 +155,7 @@ const Work = () => {
           className="absolute right-1/2 translate-x-[calc(50%)] top-[180px] z-[2] max-sm:hidden"
         />
         <Image
-          src="/homepage/middle.gif"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/homepage/middle.gif"
           alt="star"
           width={60}
           height={35}

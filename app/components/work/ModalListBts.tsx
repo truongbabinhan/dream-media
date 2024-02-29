@@ -35,7 +35,7 @@ export const ModalListBts = ({
             slidesPerView={1}
             initialSlide={initSlide}
           >
-            {data.map((item: string, index: Key | null | undefined) => {
+            {data?.map((item: string, index: Key | null | undefined) => {
               return (
                 <SwiperSlide key={index}>
                   <div className="mx-[100px] max-lg:mx-0">

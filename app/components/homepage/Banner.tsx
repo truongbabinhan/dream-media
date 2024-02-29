@@ -27,7 +27,7 @@ export const Banner = () => {
       <div className="w-full h-full backdrop-brightness-[0.1] absolute left-0 top-0 z-[1]"></div>
       <div className="flex flex-1 flex-col justify-center items-center relative z-[2] overflow-hidden max-sm:pb-[180px]">
         <Image
-          src="/homepage/left.gif"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/homepage/left.gif"
           alt="star"
           width={480}
           height={273}
@@ -35,7 +35,7 @@ export const Banner = () => {
           className="absolute left-1/2 top-1/2 -translate-x-[calc(50%+440px)] -translate-y-[calc(50%+275px)] z-[1] max-sm:hidden"
         />
         <Image
-          src="/homepage/left.gif"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/homepage/left.gif"
           alt="star"
           width={120}
           height={68}
@@ -43,7 +43,7 @@ export const Banner = () => {
           className="absolute left-1/2 -translate-x-[calc(50%+160px)] top-[40px] z-[1] hidden max-sm:block"
         />
         <Image
-          src="/homepage/right.gif"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/homepage/right.gif"
           alt="star"
           width={425}
           height={240}
@@ -51,7 +51,7 @@ export const Banner = () => {
           className="absolute right-1/2 top-1/2 translate-x-[calc(50%+500px)] -translate-y-[calc(50%+300px)] max-sm:hidden"
         />
         <Image
-          src="/homepage/right.gif"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/homepage/right.gif"
           alt="star"
           width={120}
           height={68}
@@ -59,7 +59,7 @@ export const Banner = () => {
           className="absolute left-1/2 -translate-x-[calc(50%-170px)] top-[35px] z-[1] hidden max-sm:block"
         />
         <Image
-          src="/homepage/middle.gif"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/homepage/middle.gif"
           alt="star"
           width={195}
           height={110}
@@ -67,7 +67,7 @@ export const Banner = () => {
           className="absolute right-1/2 top-1/2 translate-x-[calc(50%)] -translate-y-[calc(50%)] max-sm:hidden"
         />
         <Image
-          src="/homepage/middle.gif"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/homepage/middle.gif"
           alt="star"
           width={60}
           height={35}
@@ -75,7 +75,7 @@ export const Banner = () => {
           className="absolute right-1/2 top-[140px] translate-x-[calc(50%)] hidden max-sm:block"
         />
         <Image
-          src="/logo-home.svg"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/logo-home.svg"
           alt="Logo"
           width={753}
           height={134}

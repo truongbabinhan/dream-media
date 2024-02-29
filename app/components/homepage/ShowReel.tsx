@@ -51,7 +51,7 @@ export const ShowReel = ({ isChill }: ShowReelProps) => {
         autoPlay
         onMouseOver={(event) => onPlayVideoHover(event.target)}
         onMouseOut={(event) => onPauseVideoHover(event.target)}
-        src="/showreel-new.mp4"
+        src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/showreel-new.mp4"
       />
       <ModalShowReel open={showModal} setOpen={setShowModal} />
     </div>
