@@ -17,14 +17,14 @@ export const TextScroller = () => {
         className="w-full flex justify-center items-center gap-[18px]"
       >
         <Image
-          src="./diamond.svg"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/diamond.svg"
           width={50}
           height={50}
           alt="diamond"
           className="max-sm:hidden"
         />
         <Image
-          src="./diamond.svg"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/diamond.svg"
           width={25}
           height={25}
           alt="diamond"
@@ -42,14 +42,14 @@ export const TextScroller = () => {
           WE PRODUCE
         </p>
         <Image
-          src="./diamond.svg"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/diamond.svg"
           width={50}
           height={50}
           alt="diamond"
           className="max-sm:hidden"
         />
         <Image
-          src="./diamond.svg"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/diamond.svg"
           width={25}
           height={25}
           alt="diamond"
@@ -67,14 +67,14 @@ export const TextScroller = () => {
           WE PRODUCE
         </p>
         <Image
-          src="./diamond.svg"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/diamond.svg"
           width={50}
           height={50}
           alt="diamond"
           className="max-sm:hidden"
         />
         <Image
-          src="./diamond.svg"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/diamond.svg"
           width={25}
           height={25}
           alt="diamond"
@@ -92,14 +92,14 @@ export const TextScroller = () => {
           WE PRODUCE
         </p>
         <Image
-          src="./diamond.svg"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/diamond.svg"
           width={50}
           height={50}
           alt="diamond"
           className="max-sm:hidden"
         />
         <Image
-          src="./diamond.svg"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/diamond.svg"
           width={25}
           height={25}
           alt="diamond"
@@ -117,14 +117,14 @@ export const TextScroller = () => {
           WE PRODUCE
         </p>
         <Image
-          src="./diamond.svg"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/diamond.svg"
           width={50}
           height={50}
           alt="diamond"
           className="max-sm:hidden"
         />
         <Image
-          src="./diamond.svg"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/diamond.svg"
           width={25}
           height={25}
           alt="diamond"

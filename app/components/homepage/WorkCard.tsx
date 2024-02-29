@@ -163,7 +163,7 @@ export const WorkCard = ({ item }: WorkCardProps) => {
           {item.title}
         </p>
         <Image
-          src="./decor-work.svg"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/decor-work.svg"
           alt="decor"
           width={57}
           height={75}

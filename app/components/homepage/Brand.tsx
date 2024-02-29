@@ -14,7 +14,7 @@ export const Brand = () => {
 
       <div className="w-[1200px] max-xl:w-[800px] max-lg:w-full max-lg:px-5 relative">
         <Image
-          src="/brand/brand-white.png"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/brand/brand-white.png"
           alt="brand"
           layout="fill"
           objectFit="contain"
@@ -22,7 +22,7 @@ export const Brand = () => {
           className="!relative"
         />
         {/* <Image
-          src="/brand/brand-color.png"
+          src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/brand/brand-color.png"
           alt="brand"
           layout="fill"
           objectFit="contain"
@@ -44,7 +44,8 @@ export const Brand = () => {
               className="hovered w-full h-full bg-cover"
               style={{
                 filter: "drop-shadow(10px 10px 20px rgba(255, 255, 255, 0.6))",
-                backgroundImage: 'url("/brand/brand-color.png")',
+                backgroundImage:
+                  'url("https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/brand/brand-color.png")',
                 clipPath: `circle(60px at ${hoverPosition.x}px ${hoverPosition.y}px)`,
               }}
             ></div>

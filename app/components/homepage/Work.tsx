@@ -9,8 +9,10 @@ export const Work = () => {
       brand: "Lipovitan",
       agency: "Fortune Media",
       productionHouse: "dream media",
-      background: "/work/lipovitan.png",
-      video: "/video-intro/lipovitan.mp4",
+      background:
+        "https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/work/lipovitan.png",
+      video:
+        "https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/video-intro/lipovitan.mp4",
       link: "lipovitan",
       desc: [
         "STORYBOARD DEVELOPMENT",
@@ -35,8 +37,10 @@ export const Work = () => {
       brand: "fanta",
       agency: "t&a ogivy",
       productionHouse: "dream media",
-      background: "/work/fanta.png",
-      video: "/video-intro/fanta.mp4",
+      background:
+        "https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/work/fanta.png",
+      video:
+        "https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/video-intro/fanta.mp4",
       link: "fanta",
       desc: [
         "STORYBOARD DEVELOPMENT",
@@ -61,8 +65,10 @@ export const Work = () => {
       brand: "surf",
       agency: "t&a ogivy",
       productionHouse: "dream media",
-      background: "/work/surf.png",
-      video: "/video-intro/surf.mp4",
+      background:
+        "https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/work/surf.png",
+      video:
+        "https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/video-intro/surf.mp4",
       link: "surf",
       desc: [
         "STORYBOARD DEVELOPMENT",
@@ -89,8 +95,10 @@ export const Work = () => {
       brand: "",
       agency: "TBWA",
       productionHouse: "dream media",
-      background: "/work/cancer.png",
-      video: "/video-intro/lung-cancer.mp4",
+      background:
+        "https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/work/cancer.png",
+      video:
+        "https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/video-intro/lung-cancer.mp4",
       link: "lung-cancer",
       desc: [
         "STORYBOARD DEVELOPMENT",
@@ -113,8 +121,10 @@ export const Work = () => {
       brand: "fanta",
       agency: "t&a ogivy",
       productionHouse: "dream media",
-      background: "/work/fanta-newyear.png",
-      video: "/video-intro/fanta-newyear.mp4",
+      background:
+        "https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/work/fanta-newyear.png",
+      video:
+        "https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/video-intro/fanta-newyear.mp4",
       link: "fanta-newyear",
       desc: [
         "STORYBOARD DEVELOPMENT",
@@ -139,15 +149,15 @@ export const Work = () => {
       agency: "T&A Ogilvy",
       productionHouse: "dream media",
       background: [
-        "/work/saigon-chill/1.png",
-        "/work/saigon-chill/2.png",
-        "/work/saigon-chill/3.png",
-        "/work/saigon-chill/4.png",
-        "/work/saigon-chill/5.png",
-        "/work/saigon-chill/6.png",
+        "https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/work/saigon-chill/1.png",
+        "https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/work/saigon-chill/2.png",
+        "https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/work/saigon-chill/3.png",
+        "https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/work/saigon-chill/4.png",
+        "https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/work/saigon-chill/5.png",
+        "https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/work/saigon-chill/6.png",
       ],
       video: "",
-      link: "saigon-chill",
+      link: "saigon-chill-valentine",
       desc: ["PRE-PRODUCTION", "ART - SET DESIGN", "SHOOTING", "DI", "RETOUCH"],
     },
   ];

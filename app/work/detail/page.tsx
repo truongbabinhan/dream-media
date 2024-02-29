@@ -138,14 +138,14 @@ const WorkDetail = () => {
               className="text-[30px] max-sm:text-[20px] pb-5 max-sm:pb-[10px] flex gap-2 items-center"
             >
               <Image
-                src="../diamond-red.svg"
+                src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/diamond-red.svg"
                 width={24}
                 height={23}
                 alt="diamond"
                 className="max-sm:hidden"
               />
               <Image
-                src="../diamond-red.svg"
+                src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/diamond-red.svg"
                 width={19}
                 height={18}
                 alt="diamond"
