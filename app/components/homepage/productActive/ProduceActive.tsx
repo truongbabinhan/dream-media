@@ -11,8 +11,8 @@ interface ProduceActiveProps {
 }
 export const ProduceActive = ({ data }: ProduceActiveProps) => {
   return (
-    <div className="relative intro-new-x">
-      <div className="rounded-[70px] overflow-hidden relative">
+    <div className="relative ">
+      <div className="rounded-[70px] max-sm:rounded-[40px] overflow-hidden relative intro-new-fade-in">
         <Swiper
           spaceBetween={20}
           slidesPerView={1}
@@ -29,13 +29,14 @@ export const ProduceActive = ({ data }: ProduceActiveProps) => {
             (item: string | StaticImport, index: Key | null | undefined) => {
               return (
                 <SwiperSlide key={index}>
-                  <div className="w-full h-full">
+                  <div className="w-[856px] h-[480px] max-sm:w-full max-sm:h-full">
                     <Image
                       src={item}
                       layout="fill"
-                      className="w-full h-auto !relative"
+                      className="w-full h-auto !relative z-10"
                       alt="produce"
                     />
+                    <div className="animate-pulse bg-gray-800 w-full h-full absolute"></div>
                   </div>
                 </SwiperSlide>
               );
