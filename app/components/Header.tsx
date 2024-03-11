@@ -70,7 +70,7 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
   return (
     <>
       <Image
-        className="fixed left-5 top-[15px] z-10 max-sm:hidden cursor-pointer"
+        className="fixed left-5 top-[15px] z-[62] max-sm:hidden cursor-pointer"
         src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/logo.svg"
         alt="Logo"
         width={201}
@@ -79,7 +79,7 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
         onClick={() => router.push("/", { scroll: true })}
       />
       <Image
-        className="fixed left-[10px] top-[10px] z-10 hidden max-sm:block cursor-pointer"
+        className="fixed left-[10px] top-[10px] z-[62] hidden max-sm:block cursor-pointer"
         src="https://dreammedia.s3.ap-southeast-2.amazonaws.com/public/logo-sp.svg"
         alt="Logo"
         width={120}
@@ -89,23 +89,23 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
       />
       <p
         onClick={() => setIsShowMenu(!isShowMenu)}
-        className="fixed text-[15px] z-10 left-1/2 -translate-x-1/2 top-5 select-none cursor-pointer max-sm:right-[10px] max-sm:left-auto max-sm:translate-x-0 max-sm:top-[15px] max-sm:text-[12px]"
+        className="fixed text-[15px] z-[62] left-1/2 -translate-x-1/2 top-5 select-none cursor-pointer max-sm:right-[10px] max-sm:left-auto max-sm:translate-x-0 max-sm:top-[15px] max-sm:text-[12px]"
       >
         [ {isShowMenu ? "CLOSE" : "MENU"} ]
       </p>
-      <p className="fixed text-[15px] right-5 top-5 z-10 max-sm:hidden max-sm:text-[12px]">
+      <p className="fixed text-[15px] right-5 top-5 z-[62] max-sm:hidden max-sm:text-[12px]">
         SCROLL ({percentScroll.toFixed() || 0}%)
       </p>
-      <p className="fixed text-[15px] left-5 bottom-5 z-10 max-sm:hidden">
+      <p className="fixed text-[15px] left-5 bottom-5 z-[62] max-sm:hidden">
         HCMC ({dateNowVN}) NEW YORK ({dateNowNY})
       </p>
-      <p className="fixed text-[12px] left-[10px] bottom-[10px] z-10 hidden max-sm:block">
+      <p className="fixed text-[12px] left-[10px] bottom-[10px] z-[62] hidden max-sm:block">
         HCMC ({dateNowVN})
       </p>
       {setIsChill && (
         <p
           onClick={() => setIsChill(!isChill)}
-          className="max-sm:hidden fixed flex items-center text-[15px] z-10 cursor-pointer right-5 bottom-5 select-none max-sm:text-[12px] max-sm:right-[10px] max-sm:bottom-[10px]"
+          className="max-sm:hidden fixed flex items-center text-[15px] z-[62] cursor-pointer right-5 bottom-5 select-none max-sm:text-[12px] max-sm:right-[10px] max-sm:bottom-[10px]"
         >
           CHILL: {isChill ? "OFF" : "ON"}
           <span className="pl-2 pb-[2px]">
@@ -115,7 +115,7 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
       )}
 
       <div
-        className={`fixed z-20 top-[80px] left-[100px] bg-[linear-gradient(105deg,_color(display-p3_0.851_0.851_0.851_/_0.40)_15.93%,_color(display-p3_0.851_0.851_0.851_/_0.10)_94.84%)] backdrop-blur-lg max-sm:bg-black/90 min-w-screen transition-all overflow-hidden ${
+        className={`fixed z-[60] top-[80px] left-[100px] bg-[linear-gradient(105deg,_color(display-p3_0.851_0.851_0.851_/_0.40)_15.93%,_color(display-p3_0.851_0.851_0.851_/_0.10)_94.84%)] backdrop-blur-lg max-sm:bg-black/90 min-w-screen transition-all overflow-hidden ${
           isShowMenu
             ? "h-[calc(100%-160px)] max-sm:h-[calc(100%-100px)]"
             : "h-0"
