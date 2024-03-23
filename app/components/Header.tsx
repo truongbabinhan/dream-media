@@ -45,10 +45,19 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
     },
     {
       name: "studio life",
-      isUpdate: true,
+      isUpdate: false,
       action: () => {
         setIsShowMenu(false);
       },
+      subMenu: [
+        {
+          action: () => {
+            router.push("/careers", { scroll: true });
+            setIsShowMenu(false);
+          },
+          name: "Careers",
+        },
+      ],
     },
   ];
   useEffect(() => {
@@ -126,12 +135,14 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
             return (
               <div
                 key={index}
-                onClick={item.action}
                 className={` ${
                   (index + 2) % 2 === 0 && "pl-[100px] max-sm:pl-0"
-                } text-left h-[88px] max-2xl:h-[60px] cursor-pointer hover:text-black transition-all duration-500`}
+                } text-left h-[88px] max-2xl:h-[60px] cursor-pointer group transition-all duration-500`}
               >
-                <div className="flex justify-center items-end">
+                <div
+                  onClick={item.action}
+                  className="flex justify-center items-end hover:text-black transition-all duration-500"
+                >
                   <span className="text-[20px] max-sm:text-[12px] font-normal mr-4">
                     0{index + 1}
                   </span>{" "}
@@ -143,10 +154,26 @@ export const Header = ({ setIsChill, isChill }: HeaderProps) => {
                   </p>
                 </div>
                 {item.isUpdate && (
-                  <p className="pl-[60px] max-sm:pl-[40px] max-sm:text-[15px]">
+                  <p
+                    style={{ fontFamily: "Verdana" }}
+                    className="pl-[60px] max-sm:pl-[40px] max-sm:text-[15px] uppercase group-hover:text-black transition-all duration-500"
+                  >
                     we’re updating
                   </p>
                 )}
+                {item.subMenu?.length !== 0 &&
+                  item.subMenu?.map((subItem) => {
+                    return (
+                      <p
+                        onClick={subItem.action}
+                        key={subItem.name}
+                        style={{ fontFamily: "Verdana" }}
+                        className="pl-[60px] max-sm:pl-[40px] text-[20px] max-sm:text-[15px] uppercase hover:text-black transition-all duration-500"
+                      >
+                        {subItem.name}
+                      </p>
+                    );
+                  })}
               </div>
             );
           })}
