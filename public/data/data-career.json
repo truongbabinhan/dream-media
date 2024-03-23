@@ -1,0 +1,381 @@
+[
+  {
+    "id": "BusinessDevelopmentManager",
+    "title": "Business Development Manager",
+    "color": "rgb(249, 255, 0, 0.3)",
+    "tag": [
+      {
+        "icon": "money",
+        "text": "Salary: 16M VND"
+      },
+      {
+        "icon": "money",
+        "text": "Commission 5%"
+      },
+      {
+        "icon": "location",
+        "text": "HCMC"
+      },
+      {
+        "icon": "time",
+        "text": "Full-time"
+      }
+    ],
+    "salary": "16 million VND/month + Commission 5%",
+    "experience": "Minimum 3 years",
+    "location": "HCMC, Vietnam",
+    "keyResponsibilities": [
+      "Develop and maintain relationships with potential clients from various industries.",
+      "Organize meetings, presentations, and persuade clients about the company's products and services.",
+      "Build and maintain a database of potential and existing clients.",
+      "Advise and support clients in selecting the most suitable advertising solutions.",
+      "Plan and implement marketing and business strategies to increase sales revenue.",
+      "Monitor and evaluate business performance, propose measures to improve efficiency.",
+      "Participate in negotiating contracts and cooperation terms with clients."
+    ],
+    "jobRequirements": [
+      "Experience: 3 to 5 years in equivalent positions at advertising companies, advertising production, or creative agencies.",
+      "Sales Revenue: Achieve sales targets as set.",
+      "New Customer Information Search: Gather information and create lists of new potential customers.",
+      "New Customer Meetings: Number of face-to-face meetings to introduce products and services.",
+      "Bidding, Project Quoting: Number of proposed projects and quotations sent.",
+      "Degree: Bachelor's or equivalent in business, marketing, or advertising.",
+      "Excellent communication and persuasion skills.",
+      "Strong organizational, planning, and time management skills.",
+      "Willingness and ability to work independently and in teams.",
+      "Understanding of the advertising market and consumer trends is an advantage."
+    ],
+    "benefits": [
+      "Salary: 16,000,000 VND/month.",
+      "Project commission: 5% of the total project value. Exceeding KPIs will receive an additional 1.5% multiplied by the committed sales revenue in KPI.",
+      "Professional and dynamic working environment.",
+      "Opportunities for career advancement and development."
+    ],
+    "additionalBenefits": [
+      "Able to recruit up to 2 Business Development Executives, eligible for commission on the revenue brought in by the entire team (0.5%)."
+    ]
+  },
+  {
+    "id": "DeputyBusinessDevelopmentManager",
+    "title": "Deputy Business Development Manager",
+    "color": "rgb(0, 28, 255, 0.3)",
+    "tag": [
+      {
+        "icon": "money",
+        "text": "Salary: 11M VND"
+      },
+      {
+        "icon": "money",
+        "text": "Commission 3%"
+      },
+      {
+        "icon": "location",
+        "text": "HCMC"
+      },
+      {
+        "icon": "time",
+        "text": "Full-time"
+      }
+    ],
+    "salary": "11 million VND/month + Commission 3%",
+    "experience": "2 to 3 years",
+    "location": "HCMC, Vietnam",
+    "keyResponsibilities": [
+      "Assist the Business Development Manager in managing and developing relationships with clients.",
+      "Seek and develop relationships with potential clients from various industries.",
+      "Conduct meetings, presentations, and persuade clients about the company's products and services.",
+      "Create and maintain a database system of potential and current clients.",
+      "Support in planning and implementing marketing and business strategies to increase sales revenue.",
+      "Monitor and evaluate business performance, proposing measures to improve efficiency.",
+      "Participate in building contracts and negotiating terms of cooperation with clients."
+    ],
+    "jobRequirements": [
+      "2 to 3 years of experience in equivalent positions at agencies, production houses, creative agencies.",
+      "Sales Revenue: Achieve sales targets as set.",
+      "New Customer Information Search: Gather information and create lists of new potential customers.",
+      "New Customer Meetings: Number of face-to-face meetings to introduce products and services.",
+      "Bidding, Project Quoting: Number of proposed projects and quotations sent.",
+      "Equivalent degree in business, marketing, or advertising.",
+      "Excellent communication skills and persuasive abilities.",
+      "Strong organizational, planning, and time management skills.",
+      "Willingness and ability to work independently and in teams.",
+      "Understanding of the advertising market and consumer trends is an advantage."
+    ],
+    "benefits": [
+      "Salary: 11,000,000 VND/month.",
+      "Project commission: 3% of the total project value, additional 1.5% for exceeding KPI based on committed sales revenue.",
+      "Dynamic working environment.",
+      "Opportunities for career advancement and development."
+    ],
+    "additionalBenefits": []
+  },
+  {
+    "id": "BusinessDevelopmentExecutive",
+    "title": "Business Development Executive",
+    "color": "rgb(0, 255, 103, 0.3)",
+    "tag": [
+      {
+        "icon": "money",
+        "text": "Negotiated Salary"
+      },
+      {
+        "icon": "money",
+        "text": "Commission 2%"
+      },
+      {
+        "icon": "location",
+        "text": "HCMC"
+      },
+      {
+        "icon": "time",
+        "text": "Full-time"
+      }
+    ],
+    "salary": "Negotiated salary",
+    "experience": "",
+    "location": "HCMC, Vietnam",
+    "keyResponsibilities": [
+      "Seek and develop relationships with potential clients from various industries.",
+      "Conduct meetings, presentations, and persuade clients about the company's products and services.",
+      "Create and maintain a database system of potential and current clients.",
+      "Advise and support clients in selecting the most suitable advertising solutions.",
+      "Plan and implement marketing and business strategies to increase sales revenue.",
+      "Monitor and evaluate business performance, while proposing measures to improve efficiency.",
+      "Participate in building contracts and negotiating terms of cooperation with clients."
+    ],
+    "jobRequirements": [
+      "Sales Revenue: Achieve sales targets as set.",
+      "New Customer Information Search: Gather information and create lists of new potential customers.",
+      "Customer Outreach: Number of telesales calls and email approaches to customers.",
+      "New Customer Meetings: Number of face-to-face meetings to introduce products and services.",
+      "Bidding, Project Quoting: Number of proposed projects and quotations sent."
+    ],
+    "benefits": [
+      "Negotiated salary level based on experience.",
+      "Project commission: 2% of the total project value, additional 1.5% for exceeding KPI based on committed sales revenue.",
+      "Dynamic working environment.",
+      "Opportunities for career advancement and development."
+    ],
+    "additionalBenefits": []
+  },
+  {
+    "id": "Accountant",
+    "title": "Accountant",
+    "color": "rgb(255, 0, 243, 0.3)",
+    "tag": [
+      {
+        "icon": "money",
+        "text": "Negotiated Salary"
+      },
+
+      {
+        "icon": "location",
+        "text": "HCMC"
+      },
+      {
+        "icon": "time",
+        "text": "Full-time"
+      },
+      {
+        "icon": "time",
+        "text": "Part-time"
+      }
+    ],
+    "salary": "Negotiated salary",
+    "experience": "",
+    "location": "HCMC, Vietnam",
+    "keyResponsibilities": [
+      "Monitor daily company income and expenses.",
+      "Process invoices, receipts, and vouchers for entry into the accounting system.",
+      "Assist in preparing monthly, quarterly, and annual financial reports.",
+      "Prepare and submit monthly, quarterly, and annual tax reports to tax authorities.",
+      "Support in maintaining and updating accounting records, ledgers, and files.",
+      "Calculate and process employee salaries and social insurance.",
+      "Collect and record information on daily financial transactions, including income, expenses, and other transactions.",
+      "Monitor accounts receivable and report on outstanding balances.",
+      "Track sales figures for the sales department.",
+      "Provide necessary data and information for management analysis and reporting."
+    ],
+    "jobRequirements": [
+      "Years of Experience: 1 year or more. Preference given to candidates with experience in accounting service companies.",
+      "Career Goal: Passion for Accounting, committed to long-term engagement.",
+      "Bachelor's degree in Accounting or Finance.",
+      "Experience in accounting field preferred, especially in the advertising industry.",
+      "Attention to detail, accuracy, responsibility."
+    ],
+    "benefits": [
+      "Salary negotiable based on workload.",
+      "Negotiated salary level based on experience.",
+      "Full participation in social insurance, holiday bonuses, Tet bonuses, year-end bonuses.",
+      "Probationary period: 2 months (85% salary).",
+      "Salary increase and bonuses based on performance and workload.",
+      "Dynamic, supportive work environment with mutual assistance."
+    ],
+    "additionalBenefits": []
+  },
+  {
+    "id": "ProductionAssistantIntern",
+    "title": "Production Assistant Intern",
+    "color": "rgb(255, 13, 0, 0.3)",
+    "tag": [
+      {
+        "icon": "money",
+        "text": "Negotiated Salary"
+      },
+
+      {
+        "icon": "location",
+        "text": "HCMC"
+      },
+      {
+        "icon": "time",
+        "text": "Full-time"
+      },
+      {
+        "icon": "time",
+        "text": "Part-time"
+      }
+    ],
+    "salary": "Negotiated salary",
+    "experience": "",
+    "location": "HCMC, Vietnam",
+    "keyResponsibilities": [
+      "Help prepare the set with lights, props, equipment etc.",
+      "Assist costume designers, directors, camera, people and other crew members.",
+      "Print and distribute daily paperwork (e.g. scripts, call sheets).",
+      "Escort actors around the filming area and coordinate extras.",
+      "Conduct crowd control by putting up signs, directing pedestrians away from filming, lock down sets etc.",
+      "Act as a runner distributing messages or items within film crew and cast.",
+      "Perform administrative work (answering phones, paperwork etc.).",
+      "Undertake errands as assigned."
+    ],
+    "jobRequirements": [
+      "Proven experience as production assistant or a passion for the industry.",
+      "Knowledge of terminology will be appreciated.",
+      "Computer savvy.",
+      "Excellent organizational and multi-tasking ability.",
+      "Resourcefulness and problem-solving.",
+      "A team player with great communication skills",
+      "Physical strength and stamina",
+      "A valid driver's license",
+      "High school diploma; Relevant training (e.g. production courses) will be an advantage"
+    ],
+    "benefits": [
+      "Negotiated salary level based on experience.",
+      "Work on increasingly challenging and engaging real-world projects.",
+      "Great mentorship and the opportunity to develop your skills.",
+      "Work closely with a mentor who has almost 10 years of experience in the field.",
+      "Competitive internship stipend or hourly wage based on qualifications and experience.",
+      "Reimbursement or subsidy for relevant job-related expenses such as commuting costs or professional development courses.",
+      "Opportunity for performance-based incentives or bonuses.",
+      "Access to company resources and networking opportunities to enhance professional growth and development.",
+      "Stipend travel/lunch."
+    ],
+    "additionalBenefits": []
+  },
+  {
+    "id": "GraphicDesignerIntern",
+    "title": "Graphic Designer Intern",
+    "color": "rgb(97, 0, 255, 0.3)",
+    "tag": [
+      {
+        "icon": "money",
+        "text": "Negotiated Salary"
+      },
+
+      {
+        "icon": "location",
+        "text": "HCMC"
+      },
+      {
+        "icon": "time",
+        "text": "Full-time"
+      },
+      {
+        "icon": "time",
+        "text": "Part-time"
+      }
+    ],
+    "salary": "Negotiated salary",
+    "experience": "",
+    "location": "HCMC, Vietnam",
+    "keyResponsibilities": [
+      "Collaborate with the production team to understand project requirements and objectives.",
+      "Assist in creating engaging and visually appealing graphics for digital and print media, including social media posts, banners, brochures, flyers, presentations, and more.",
+      "Use Adobe Creative Suite (Photoshop, Illustrator, InDesign) and other design software to develop designs that meet brand guidelines and project specifications.",
+      "Brainstorm and contribute creative ideas for design projects.",
+      "Participate in design meetings and present design concepts to team members.",
+      "Support the design team in various tasks, including photo editing, image retouching, and asset organization.",
+      "Stay up-to-date with industry trends and best practices in graphic design."
+    ],
+    "jobRequirements": [
+      "Currently pursuing or recent graduate with a degree in Graphic Design, Visual Arts, or a related field.",
+      "Proficiency in Adobe Creative Suite, particularly Photoshop, Illustrator, and InDesign.",
+      "Strong creativity and artistic skills, with a keen eye for detail and design aesthetics.",
+      "Excellent communication and teamwork abilities.",
+      "Ability to multitask and work efficiently in a fast-paced environment.",
+      "Strong organizational skills and ability to meet deadlines.",
+      "Prior experience or internship in graphic design is a plus."
+    ],
+    "benefits": [
+      "Negotiated salary level based on experience.",
+      "Hands-on experience working on real-world design projects.",
+      "Opportunity to learn from experienced professionals in the field.",
+      "Exposure to a variety of design styles and techniques.",
+      "Flexible work hours to accommodate academic schedules.",
+      "Potential for growth and advancement within the company."
+    ],
+    "additionalBenefits": []
+  },
+  {
+    "id": "SocialMediaIntern",
+    "title": "Social Media Intern",
+    "color": "rgb(0, 240, 255, 0.3)",
+    "tag": [
+      {
+        "icon": "money",
+        "text": "Negotiated Salary"
+      },
+
+      {
+        "icon": "location",
+        "text": "HCMC"
+      },
+      {
+        "icon": "time",
+        "text": "Full-time"
+      },
+      {
+        "icon": "time",
+        "text": "Part-time"
+      }
+    ],
+    "salary": "Negotiated salary",
+    "experience": "",
+    "location": "HCMC, Vietnam",
+    "keyResponsibilities": [
+      "Assist in creating diverse and high-quality content for social media platforms, including posts, images, videos, and interactive content.",
+      "Support in managing and updating the company's social media pages, including planning and scheduling posts.",
+      "Participate in social media advertising campaigns and assist in monitoring, evaluating, and reporting on performance.",
+      "Engage with the community on social media platforms by responding to comments, messages, and user feedback.",
+      "Research and propose new ideas and creative strategies to enhance the effectiveness of social media activities."
+    ],
+    "jobRequirements": [
+      "Currently enrolled student or recent graduate with a major in Communications, Marketing, Advertising, or related fields.",
+      "Basic knowledge of social media platforms such as Facebook, Instagram, Twitter, LinkedIn, and proficiency in using social media management tools.",
+      "Strong writing and communication skills, with the ability to be creative and grasp communication trends.",
+      "Attention to detail and ability to work independently as well as in a team.",
+      "Willingness to learn and adapt quickly in a dynamic work environment.",
+      "Preference will be given to candidates with experience or knowledge of social media data analytics tools and methods."
+    ],
+    "benefits": [
+      "Negotiated salary level based on experience.",
+      "Competitive internship stipend or hourly wage based on qualifications and experience.",
+      "Reimbursement or subsidy for relevant job-related expenses such as commuting costs or professional development courses.",
+      "Opportunity for performance-based incentives or bonuses.",
+      "Access to company resources and networking opportunities to enhance professional growth and development.",
+      "Work Schedule: Full-time or part-time, flexible working hours depending on job requirements and student availability."
+    ],
+    "additionalBenefits": []
+  }
+]

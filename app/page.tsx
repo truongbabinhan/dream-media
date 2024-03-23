@@ -17,13 +17,18 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col relative items-center justify-between bg-black">
       <Header setIsChill={setIsChill} isChill={isChill} />
-      {!isShowHome && <LoadingScreen setIsShowHome={setIsShowHome} />}
-      <ShowReel isChill={isChill} />
-      <Banner />
-      <Work />
-      <WeProduce />
-      <Brand />
-      <Footer />
+      {!isShowHome ? (
+        <LoadingScreen setIsShowHome={setIsShowHome} />
+      ) : (
+        <>
+          <ShowReel isChill={isChill} />
+          <Banner />
+          <Work />
+          <WeProduce />
+          <Brand />
+          <Footer />
+        </>
+      )}
     </main>
   );
 }
