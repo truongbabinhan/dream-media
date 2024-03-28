@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { TextScramble } from "../..";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/effect-fade";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { Key } from "react";
 
@@ -16,14 +17,15 @@ export const ProduceActive = ({ data }: ProduceActiveProps) => {
         <Swiper
           spaceBetween={20}
           slidesPerView={1}
+          effect={"fade"}
           centeredSlides={true}
           autoplay={{
-            delay: 2000,
+            delay: 3000,
             disableOnInteraction: false,
           }}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
-          modules={[Autoplay]}
+          modules={[Autoplay, EffectFade]}
         >
           {data?.img.map(
             (item: string | StaticImport, index: Key | null | undefined) => {

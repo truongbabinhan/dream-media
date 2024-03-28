@@ -2,7 +2,7 @@
   {
     "id": "BusinessDevelopmentManager",
     "title": "Business Development Manager",
-    "color": "rgb(249, 255, 0, 0.3)",
+    "color": "1",
     "tag": [
       {
         "icon": "money",
@@ -58,7 +58,7 @@
   {
     "id": "DeputyBusinessDevelopmentManager",
     "title": "Deputy Business Development Manager",
-    "color": "rgb(0, 28, 255, 0.3)",
+    "color": "2",
     "tag": [
       {
         "icon": "money",
@@ -112,7 +112,7 @@
   {
     "id": "BusinessDevelopmentExecutive",
     "title": "Business Development Executive",
-    "color": "rgb(0, 255, 103, 0.3)",
+    "color": "3",
     "tag": [
       {
         "icon": "money",
@@ -161,7 +161,7 @@
   {
     "id": "Accountant",
     "title": "Accountant",
-    "color": "rgb(255, 0, 243, 0.3)",
+    "color": "4",
     "tag": [
       {
         "icon": "money",
@@ -216,7 +216,7 @@
   {
     "id": "ProductionAssistantIntern",
     "title": "Production Assistant Intern",
-    "color": "rgb(255, 13, 0, 0.3)",
+    "color": "5",
     "tag": [
       {
         "icon": "money",
@@ -276,7 +276,7 @@
   {
     "id": "GraphicDesignerIntern",
     "title": "Graphic Designer Intern",
-    "color": "rgb(97, 0, 255, 0.3)",
+    "color": "6",
     "tag": [
       {
         "icon": "money",
@@ -330,7 +330,7 @@
   {
     "id": "SocialMediaIntern",
     "title": "Social Media Intern",
-    "color": "rgb(0, 240, 255, 0.3)",
+    "color": "7",
     "tag": [
       {
         "icon": "money",

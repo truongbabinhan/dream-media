@@ -89,22 +89,25 @@ const CareerDetail = () => {
         </div>
         <div
           style={{ fontFamily: "Verdana" }}
-          className="w-[1024px] max-lg:w-full mt-[40px] max-lg:mt-[20px] rounded-[40px] max-lg:rounded-[30px] mx-auto p-[40px] max-lg:p-[20px] bg-[linear-gradient(105deg,_color(display-p3_0.851_0.851_0.851_/_0.30)_15.93%,_color(display-p3_0.851_0.851_0.851_/_0.10)_94.84%)] backdrop-blur-sm"
+          className="w-[1024px] max-lg:w-full mt-[40px] max-lg:mt-[20px] rounded-[40px] max-lg:rounded-[30px] mx-auto p-[40px] max-lg:p-[20px] bg-[linear-gradient(105deg,_color(display-p3_0.851_0.851_0.851_/_0.30)_15.93%,_color(display-p3_0.851_0.851_0.851_/_0.10)_94.84%)] backdrop-blur-sm relative"
         >
-          <div className="flex flex-col gap-3 absolute left-[-80px] max-lg:left-auto max-lg:right-0 max-lg:bottom-[-60px] max-lg:flex-row">
-            <img
-              className="w-[40px] h-[40px] max-lg:w-[30px] max-lg:h-[30px] cursor-pointer hover:opacity-50 transition-all"
-              src="/icon/linkedin.svg"
-            />
-            <img
-              className="w-[40px] h-[40px] max-lg:w-[30px] max-lg:h-[30px] cursor-pointer hover:opacity-50 transition-all"
-              src="/icon/facebook.svg"
-            />
-            <img
-              className="w-[40px] h-[40px] max-lg:w-[30px] max-lg:h-[30px] cursor-pointer hover:opacity-50 transition-all"
-              src="/icon/link.svg"
-            />
+          <div className="sticky max-lg:absolute top-[120px] max-lg:top-auto max-lg:bottom-[-60px] max-lg:right-0">
+            <div className="absolute max-lg:relative flex flex-col gap-3 left-[-120px] max-lg:left-auto max-lg:flex-row">
+              <img
+                className="w-[40px] h-[40px] max-lg:w-[30px] max-lg:h-[30px] cursor-pointer hover:opacity-50 transition-all"
+                src="/icon/linkedin.svg"
+              />
+              <img
+                className="w-[40px] h-[40px] max-lg:w-[30px] max-lg:h-[30px] cursor-pointer hover:opacity-50 transition-all"
+                src="/icon/facebook.svg"
+              />
+              <img
+                className="w-[40px] h-[40px] max-lg:w-[30px] max-lg:h-[30px] cursor-pointer hover:opacity-50 transition-all"
+                src="/icon/link.svg"
+              />
+            </div>
           </div>
+
           {dataDetail?.keyResponsibilities?.length !== 0 && (
             <>
               <p className="text-[25px] max-lg:text-[15px] mb-5 max-lg:mb-2">
