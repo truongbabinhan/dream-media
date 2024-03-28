@@ -17,7 +17,7 @@ export const Card = ({ data }: any) => {
       style={{
         backgroundImage: `linear-gradient(150deg, rgba(255, 255, 255, 0.40) 0.06%, rgba(153, 153, 153, 0.05) 96.57%)`,
       }}
-      className="w-[330px] h-[350px] max-sm:w-[calc(50%-8px)] max-sm:h-[218px] max-sm:max-w-[200px] rounded-[30px] max-sm:rounded-[25px] p-7 max-sm:p-4 overflow-hidden hover:border-white border-2 border-black backdrop-blur-sm cursor-pointer transition-all duration-500"
+      className="relative w-[330px] h-[350px] max-sm:w-[calc(50%-8px)] max-sm:h-[218px] max-sm:max-w-[200px] rounded-[30px] max-sm:rounded-[25px] p-7 max-sm:p-4 overflow-hidden hover:border-white border-2 border-black backdrop-blur-sm cursor-pointer transition-all duration-500"
     >
       <img
         className="w-full h-full absolute left-0 top-0"
